@@ -1,0 +1,70 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			.row
+				.col-lg-7
+					.row.justify-content-between
+						.col-md
+							+e.A.logo(href="#")
+								+e.img-wrap
+									img(src="img/logo-2.png", alt="")
+								+e.logo-title Ваше ателье в области редукторостроения
+							p Копирование материала сайта только с&nbsp;письменного&nbsp;согласия собственника сайта
+							+e.secondary-menu.d-none.d-md-block
+								ul
+									li
+										a(href="#") Политика конфиденциальности
+									li
+										a(href="#") Пользовательское соглашение
+									li
+										a(href="#") Карта сайта
+						+e.coll.col-md
+							+e.menu
+								ul
+									li
+										a(href="#") Технические возможности
+									li
+										a(href="#") Новости
+									li
+										a(href="#") Тяжелонагруженные редукторы
+									li
+										a(href="#") Мультипликаторы (турборедукторы)
+									li
+										a(href="#") Зубчатые передачи и комплектующие
+									li
+										a(href="#") Импортозамещение 
+									li
+										a(href="#") Контакты
+
+				.col-lg
+					.row
+						+e.col.col-md-6.col-xl-7
+							+e.write Пишите нам:
+								a(href="mailto:office@vakoma.ru") office@vakoma.ru
+						.col-md-6.col-xl-5
+							+e.contacts
+								+e.A.nuber(href="tel:8 (3519) 23-54-00") 8 (3519) #[strong 23-54-00]
+								+e.A.call.link-modal(href="#modal-call") Заказать звонок
+								+e.messengers
+									a(href="https://t.me/joinchat/AAAAAEaqwNfJ8lhEEfuFbg")
+										img(src="img/telegram.png", alt="alt")
+									a(href="https://invite.viber.com/?g2=AQBJwWTp9zNKH0tCN%2BaR3jUoUCNs0KX%2FeFXQeOhR%2B8snqE7Z3r%2BM0vZrTovzcgzE")
+										img(src="img/viber.png", alt="alt")
+									a(href="https://wa.me/+380-00-00-00-000")
+										img.whatsapp(src="img/whatsapp.png", alt="alt")
+						+e.col.col-md-6
+							+e.secondary-menu.d-block.d-md-none
+								ul
+									li
+										a(href="#") Политика конфиденциальности
+									li
+										a(href="#") Пользовательское соглашение
+									li
+										a(href="#") Карта сайта
+							+e.text Создание и&nbsp;продвижение  сайта: #[a(href="#" target="_blank")  Студия &laquo;Барс&raquo;] 
+						.col-md-6
+							+b.develop-link(href="#" target="_blank")
+								+e.panel
+									img.img-1(src="img/svg/hand.svg", alt="")
+									img.img-2(src="img/svg/logo-text.svg", alt="")
+
