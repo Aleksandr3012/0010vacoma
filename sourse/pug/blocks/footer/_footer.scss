@@ -107,7 +107,7 @@
 		}
 	}
 
-	&__nuber {
+	&__number {
 		color: $white !important;
 		@include mt;
 		margin-top: rem(7);
@@ -115,6 +115,9 @@
 		text-decoration: none !important;
 		// color: inherit;
 		display: block;
+		&:hover {
+			color: $yellow  !important;
+		}
 	}
 
 	&__call {
@@ -126,6 +129,9 @@
 		display: inline-block;
 		border-bottom: solid 1px $white;
 		margin-bottom: rem(16);
+		&:hover {
+			color: $yellow  !important;
+		}
 	}
 
 	&__messengers a {

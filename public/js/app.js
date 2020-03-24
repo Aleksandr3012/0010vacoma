@@ -1,19 +1,19 @@
 "use strict";
 
-var headerBlockVue = new Vue({
-	el: '#headerBlock',
-	data: {
-		imgSRc: 'img/'
-	},
-	created: function created() {},
-	computed: {}
-}); // .footer scripts goes here
-
 var header = new Vue({
 	el: '#header',
 	data: {
 		imgSRc: 'img/',
 		a: a
+	},
+	created: function created() {},
+	computed: {}
+}); // .footer scripts goes here
+
+var headerBlockVue = new Vue({
+	el: '#headerBlock',
+	data: {
+		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
@@ -26,16 +26,16 @@ var sContactVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContentVue = new Vue({
-	el: '#sContent',
+var sFormVue = new Vue({
+	el: '#sForm',
 	data: {
 		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
 });
-var sFormVue = new Vue({
-	el: '#sForm',
+var sContentVue = new Vue({
+	el: '#sContent',
 	data: {
 		imgSRc: 'img/'
 	},

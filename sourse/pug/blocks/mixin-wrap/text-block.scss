@@ -1,5 +1,5 @@
 // start .s-text
-.s-text {
+.text-block {
 	max-width: rem(1027);
 	margin-left: auto;
 	margin-right: auto;
@@ -14,6 +14,9 @@
 	p {
 		// line-height: 1.85;
 		margin-bottom: rem(31);
+		@include media-breakpoint-down(md){
+			font-size: rem(17);
+		}
 	}
 
 	strong {
@@ -23,6 +26,9 @@
 	ul {
 		padding-left: rem(34);
 		padding-bottom: rem(10);
+		@include media-breakpoint-down(md){
+			font-size: rem(17);
+		}
 	}
 
 	li {
@@ -41,6 +47,45 @@
 			background-color: $primary;
 		}
 	}
+
+	.h2 {
+		font-weight: 500;
+		letter-spacing: rem(0.7px);
+		// padding-bottom: rem(5);
+		@include media-breakpoint-up(md){
+			padding-bottom: rem(18);
+		}
+	}
+
+	.h4 {
+		font-weight: 500;
+		padding-top: rem(15);
+		padding-bottom: rem(20);
+		@include media-breakpoint-up(md){
+			padding-bottom: rem(26);
+		}
+		letter-spacing: rem(0.5px);
+	}
+
+	&--inner {
+		padding-top: rem(30) !important;
+		padding-bottom: rem(50) !important;
+
+		p {
+			margin-bottom: rem(17);
+		}
+
+		li {
+			&::after {
+			top: rem(16);
+			}
+		}
+
+		ul {
+			padding-bottom: rem(2);
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

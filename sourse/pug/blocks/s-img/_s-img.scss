@@ -6,6 +6,10 @@
 		@include media-breakpoint-up(md){
 			@include roww(7);
 		}
+
+		img {
+			margin-bottom: rem(10);
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

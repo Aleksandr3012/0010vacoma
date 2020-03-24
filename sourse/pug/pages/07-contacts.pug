@@ -1,6 +1,34 @@
-mixin s-text()
-	// start s-text
-	+b.s-text#s-text&attributes(attributes)
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Технические возможности
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Редукторы и мультипликаторы
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Контакты
+
+
+	//- +header()
+	+topLine()
+		+mob-mnu()
+			+menu()
+	+top-nav
+		+menu()
+	+text()
 		.container
 			p #[strong Основным направлением ООО &laquo;ВАКОМА РУС&raquo; является проектирование и&nbsp;изготовление редукторной техники] с&nbsp;целью интеграции инженерных разработок ВАКОМА в&nbsp;российские и международные модернизационные проекты в&nbsp;области нефтедобычи, нефтепереработки, химии, нефтехимии, энергетики и&nbsp;металлургии с&nbsp;предложением Заказчикам следующей основной номенклатуры приводных машин:
 			ul
@@ -12,4 +40,5 @@ mixin s-text()
 				li Модернизированные редукторы для аппаратов воздушного охлаждения (АВО), станков-качалок и&nbsp;систем цепного привода;
 				li Аналоги редукторов и&nbsp;зубчатых пар отечественных и&nbsp;иностранных производителей.
 			p Изготовление оборудования ведется как на&nbsp;основании предоставленной конструкторской документации Заказчиком, а&nbsp;также по&nbsp;собственному инжинирингу на&nbsp;основании проведенных геометрических замеров действующего оборудования с&nbsp;сохранением посадочных мест и&nbsp;присоединительных размеров.
-	// end s-text
+	+s-img
+	+footer()

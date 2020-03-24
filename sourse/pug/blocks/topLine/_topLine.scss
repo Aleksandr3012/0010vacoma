@@ -80,6 +80,10 @@
 		// height: 100%;
 		margin-right: rem(35);
 		margin-bottom: rem(5);
+		text-decoration: none !important;
+		// &:hover{
+		// 	color: $warning;
+		// }
 	}
 
 	&__mail {
@@ -87,6 +91,10 @@
 		font-size: rem(19);
 		line-height: 1.25;
 		// min-width: rem(170);
+		@include mt;
+		&:hover{
+			color: $warning;
+		}
 		strong {
 			display: block;
 		}
@@ -108,7 +116,7 @@
 		color: inherit;
 		display: block;
 		&:hover {
-			color: $primary;
+			color: $warning;
 		}
 	}
 
@@ -123,6 +131,12 @@
 		font-weight: 700;
 		display: inline-block;
 		border-bottom: solid 1px $black;
+		@include mt;
+		&:hover {
+			color: $warning;
+			border-bottom: solid 1px $warning;
+
+		}
 	}
 
 	// a {

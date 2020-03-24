@@ -67,6 +67,32 @@ mixin add-file(n)
 
 
 mixin polite()
-	+e.polite
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+e.polite.text-secondary  Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;
+		a(href="privacy-policy.pdf" target="_blank").tdu.text-secondary Политикой конфиденциальности
+
+
+mixin form-tabs()
+	.tabs
+		+e.group
+			+e.group-title Как с вами связаться?
+
+			.tabs__caption
+				.tabs__btn.active
+					+icon('tel')
+					| Звонок 
+				.tabs__btn
+					+icon('viber')
+					| Viber
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+ 
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
+		//- .h5.text-secondar Перезвоню в течение рабочего дня

@@ -118,7 +118,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/01.png);"></div>');
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/05.png);"></div>');
 	// /добавляет подложку для pixel perfect
 
 
@@ -212,12 +212,28 @@ function eventHandler() {
 
 
 
+
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {
-		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`)
+		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`);
 
 	}
-};
+
+	//показывает инпут при клике на текст
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
+	});
+
+	//    const wow = new WOW({ mobile: false });
+	$(' .breadcrumb').slick({
+		...defaultSlide,
+		// arrows: false,
+		dots: false,
+		arrows: false,
+		variableWidth: true,
+		infinite: false
+	});
+}
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
