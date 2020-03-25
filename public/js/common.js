@@ -105,7 +105,7 @@ var JSCCommon = {
 };
 
 function eventHandler() {
-	var _ref;
+	var _Swiper;
 
 	// полифил для object-fit
 	objectFitImages(); // Picture element HTML5 shiv
@@ -171,16 +171,16 @@ function eventHandler() {
 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 	});
 	slider;
-	var swiper4 = new Swiper('.color-slider', (_ref = {
+	var swiper4 = new Swiper('.color-slider', (_Swiper = {
 		// slidesPerView: 5,
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 0,
 		freeMode: true
-	}, _defineProperty(_ref, "watchOverflow", true), _defineProperty(_ref, "slidesPerGroup", 3), _defineProperty(_ref, "loop", true), _defineProperty(_ref, "loopFillGroupWithBlank", true), _defineProperty(_ref, "touchRatio", 0.2), _defineProperty(_ref, "slideToClickedSlide", true), _defineProperty(_ref, "freeModeMomentum", true), _defineProperty(_ref, "navigation", {
+	}, _defineProperty(_Swiper, "watchOverflow", true), _defineProperty(_Swiper, "slidesPerGroup", 3), _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "loopFillGroupWithBlank", true), _defineProperty(_Swiper, "touchRatio", 0.2), _defineProperty(_Swiper, "slideToClickedSlide", true), _defineProperty(_Swiper, "freeModeMomentum", true), _defineProperty(_Swiper, "navigation", {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
-	}), _ref)); // modal window
+	}), _Swiper)); // modal window
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
