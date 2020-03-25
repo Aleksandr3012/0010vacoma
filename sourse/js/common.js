@@ -211,6 +211,15 @@ function eventHandler() {
 		$('.form-wrap__toggle-block--js').toggle();
 	});
 
+	$(".menu-mobile__nav .dropdown ").each(function(){
+		$(this).append('<div class="toggle-l"></div>');
+	});
+
+	$( '.menu-mobile__nav .dropdown  ').click(function (){
+			$('.drop').slideToggle();
+			return false;
+	});
+
 	//    const wow = new WOW({ mobile: false });
 	// $(' .breadcrumb').slick({
 	// 	// ...defaultSlide,

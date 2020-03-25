@@ -182,6 +182,7 @@
 		}
 
 		.form-wrap__input {
+			padding: rem(33) rem(26);
 			margin-top: rem(19);
 			border-radius: 5px;
 			border: 1px solid #f6f6f6;
@@ -201,6 +202,11 @@
 			a {
 				display: inline-block;
 			}
+		}
+
+		.form-control:focus, .form-control:active {
+			box-shadow: none;
+			border-color: $blue;
 		}
 
 		.tabs__caption {
