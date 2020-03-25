@@ -240,11 +240,11 @@ function eventHandler() {
 		arrows: true,
 		dots: true,
 		slidesToShow: 1,
-		slidesToScroll: 2,
 		responsive: [
 			{
 				breakpoint: 768,
 				settings: {
+					slidesToScroll: 2,
 					slidesToShow: 2,
 				}
 			},
