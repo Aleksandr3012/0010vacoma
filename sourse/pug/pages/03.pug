@@ -1,0 +1,79 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новости'
+	title= title
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Технические возможности
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Редукторы и мультипликаторы
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Контакты 
+	//- +header()
+	+topLine()
+		+mob-mnu()
+			+menu()
+	+top-nav
+		+menu()
+	mixin bread()
+		.container
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") Главная  
+							meta(itemprop="position" )
+							
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") Новости
+							meta(itemprop="position" )
+
+					li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2016 год
+							meta(itemprop="position" )
+							
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList").pt-1
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2020 год 
+							meta(itemprop="position" )
+							
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2019 год  
+							meta(itemprop="position" )
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2018 год   
+							meta(itemprop="position" )
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name")    2017 год 
+							meta(itemprop="position" )
+
+					li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2016 год
+							meta(itemprop="position" )
+	+bread()
+	
+	+s-news
+	.pb-5
+		+bread()
+	//- +s-img
+	+footer()

@@ -1,0 +1,127 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Технические возможности
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Редукторы и мультипликаторы
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Контакты 
+	//- +header()
+	+topLine()
+		+mob-mnu()
+			+menu()
+	+top-nav
+		+menu()
+	mixin bread()
+		.container
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") Главная  
+							meta(itemprop="position" )
+							
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") Новости
+							meta(itemprop="position" )
+
+					li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2016 год
+							meta(itemprop="position" )
+							
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList").pt-1
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2020 год 
+							meta(itemprop="position" )
+							
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2019 год  
+							meta(itemprop="position" )
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2018 год   
+							meta(itemprop="position" )
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name")    2017 год 
+							meta(itemprop="position" )
+
+					li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2016 год
+							meta(itemprop="position" )
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Поставка зубчатой передачи для турборедуктора (мультипликатора) Р-430 в составе газоперекачивающего агрегата ТКА-Ц-16/76 для ПАО «СИБУР Холдинг»
+			p На основании проведенных замеров и изучения исходной документации на площадке Заказчика была разработана конструкторская документация, в соответствии с которой были изготовлены комплект зубчатой передачи (шестерня ведомая, шестерня ведущая) для редуктора М-430, имеющего следующие характеристики: подшипники скольжения (опорные и опорно-упорный), втулки зубчатые, обоймы, полумуфты). При изготовлении были использованы усовершенствованные NiCrMo марки сплавов, имеющие повышенные характеристики, с проведением термообработки поверхности зубьев – цементация (твердость 58-60 HRC).
+	+s-img
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Параметр
+					th Вал-шестерня
+					th  Колесо зубчатое с валом
+	
+				tr.bg-light
+					td  Мощность эл. двигателя, кВт
+					td(colspan="2").text-center  18 000
+	
+				tr.bg-light
+					td  Частота вращения на входном валу, <br>  об./мин
+					td(colspan="2").text-center 10 998
+	
+				tr.bg-light
+					td  Число зубьев
+					td.text-center 40
+					td.text-center 83
+	
+				tr.bg-light
+					td  Передаточное отношение
+					td(colspan="2").text-center 1 : 2,075
+	
+				tr.bg-light
+					td  Межосевое расстояние, мм
+					td(colspan="2").text-center 430
+	
+				tr.bg-light
+					td  Угол наклона зубьев, °
+					td(colspan="2").text-center 30,9
+	
+				tr.bg-light
+					td  Модуль, мм
+					td(colspan="2").text-center 6
+	
+				tr.bg-light
+					td  Масса, кг
+					td.text-center 315
+					td.text-center 932
+ 
+	
+	.pb-5
+		+bread()
+	//- +s-img
+	+footer()
