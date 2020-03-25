@@ -1,0 +1,61 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Тяжелонагруженные редукторы'
+	title= title
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Технические возможности
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Редукторы и мультипликаторы
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Контакты
+
+
+	//- +header()
+	+topLine()
+		+mob-mnu()
+			+menu()
+	+top-nav
+		+menu()
+	.container
+		nav(aria-label="breadcrumb" )
+			ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+				li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='#' itemprop="item" )
+						span( itemprop="name") Главная 
+						meta(itemprop="position" )
+				li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='#' itemprop="item" )
+						span( itemprop="name")= title
+						meta(itemprop="position" )
+	+text()(class="text-block--gearboxes")
+		.container
+			h1.h2.text-center= title
+			p Мы&nbsp;разрабатываем различные типы редукторов для применения в&nbsp;составе основного технологического оборудования предприятий различных областей.
+			p Предлагаемые к&nbsp;поставке редукторы (цилиндрические, с&nbsp;конической косозубой передачей, планетарные) могут быть полным аналогом редукторов, эксплуатирующихся Заказчиком, а&nbsp;также специально разработанной моделью (адаптивное решение) с&nbsp;учетом возможности установки новой машины на&nbsp;существующие фундаменты, с&nbsp;полным сохранением всех основных присоединительных размеров.
+			p Корпуса редукторов могут быть разработаны и изготовлены в двух вариантах:
+			ul
+				li Крутильно-жесткий, недеформируемый, сварной конструкции (рассчитан&nbsp;в&nbsp;соответствии&nbsp;с&nbsp;МКЭ);
+				li Литой, с&nbsp;механической обработкой.
+			p Зубчатые передачи&nbsp;&mdash; твердые шлифованные. При изготовлении зубчатых передач используются улучшенные марки NiCrMo-сплавов.
+			p Термообработка поверхности зубьев&nbsp;&mdash; цементация.
+			p Подшипники, устанавливаемые в&nbsp;редукторы нашей конструкции,&nbsp;&mdash; от&nbsp;ведущих мировых производителей (SKF, FAG, TIMKEN, EVOLMEC).
+			p Системы смазки рассчитываются индивидуально для каждого типа редуктора.
+			p Основные отрасли применения тяжелонагруженных редукторов «ВАКОМА РУС»:
+			ul
+				li Строительная промышленность (вращающиеся печи, мельницы, сушильные барабаны и&nbsp;пр.)
+				li Нефтехимическая отрасль (экструдеры, экспеллеры, сушильные и&nbsp;отжимные машины, аэраторы и&nbsp;пр.).
+				li Нефтегазовая отрасль (редукторы для аппаратов воздушного охлаждения, станков-качалок, систем цепного привода и&nbsp;пр.)
+	+s-img-sl
+	+footer()
