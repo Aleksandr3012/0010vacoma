@@ -1,8 +1,121 @@
 <!DOCTYPE html>
+<div class="d-none">
+	<?php
+		if(!empty($_POST)){
+				ini_set( 'display_errors', 1 );
+				require __DIR__ . '/vendor/autoload.php';
+				// $to='trifectahealthnyc@gmail.com';
+				$mail = new PHPMailer(true);
+				$mail->IsMail();
+				$mail->IsHTML(true);
+	
+				$mail->Priority = '1';
+				$mail->Encoding = 'base64' ;
+				$mail->CharSet = 'utf-8';
+	
+		///от кого письмо
+				$mail->setFrom('info@info.com');
+	
+				$mail->addAddress('wol1414@gmail.com');
+				// $mail->addAddress('spike.mgn@gmail.com');
+				// $mail->addAddress('grouplend@mail.ru');
+				// $mail->addAddress('rocketsstat@yandex.ru');
+				// $mail->addAddress('455203@mail.ru');
+	
+	
+		//Субъект
+				$mail->Subject = 'Заявка с сайта groupv.ru (Верстаки)';
+	
+				$time = date('d.m.Y в H:i');
+				$html = '
+	
+		<table style="width: 100%;">';
+				if (!empty($_POST['order'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
+				}
+	
+				
+	
+				if (!empty($_POST['name'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Имя:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
+				}
+	
+				if (!empty($_POST['tel'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['email'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['whatsapp'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Whatsapp:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['whatsapp'] . '</b></td></tr>';
+				}
+				
+				if (!empty($_POST['viber'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Viber:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['viber'] . '</b></td></tr>';
+				}
+				 
+				if (!empty($_POST['textarea'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Текст сообщения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['textarea'] . '</b></td></tr>';
+				}
+	
+	
+				if (!empty($_POST['type-company'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вид компании: </td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['type-company']) .  '</b></td>';
+				}
+	
+				if (!empty($_POST['utm_source'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">utm_source:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_source'] . '</b></td>';
+				}
+	
+				if (!empty($_POST['utm_term'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_term:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_term'] . '</b></td>';
+				}
+				
+				if (!empty($_POST['utm_medium'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_medium:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_medium'] . '</b></td>';
+				}
+				if (!empty($_POST['utm_campaign'])) {
+						$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_campaign:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_campaign'] . '</b></td>';
+				}
+	
+			 
+	
+				$html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">  Время отправки:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $time . '</b></td>
+					<tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> IP:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_SERVER['REMOTE_ADDR'] . '</b></td> 
+		</table>
+		';
+				$mail->Body = $html;
+	
+				$uploaddir = __DIR__ . '/upload/';
+	
+				// if ($_FILES['file']['tmp_name']) {
+				// 		$mail->addAttachment($_FILES['file']['tmp_name'],$_FILES['file']['name']);
+				// }
+	
+		// if ($_FILES['file2']['tmp_name']) {
+		//  $mail->addAttachment($_FILES['file2']['tmp_name'],$_FILES['file2']['name']);
+		// }
+	
+		//send the message, check for errors
+			 
+				if (!$mail->send()) {
+		//        echo "Mailer Error: " . $mail->ErrorInfo;
+				} else {
+		//        echo "Message sent!";
+				}
+				if (isset($uploadfile))unlink($uploadfile);
+				if (isset($uploadfile2))unlink($uploadfile2);
+	 
+		}
+		?>
+	
+</div>
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>Cпасибо</title>
 		<meta name="description" content="">
 		<meta name="Keywords" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +144,7 @@
 				</div>
 				<div class="menu-mobile__inner">
 								<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-mobile__item active" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Главная</a>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Главная</a>
 									</li>
 									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Технические возможности</a>
 									</li>
@@ -89,7 +202,7 @@
 			<div class="top-nav block-with-lazy d-none d-lg-block">
 				<div class="container">
 								<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="top-nav__item active" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Главная</a>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Главная</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Технические возможности</a>
 									</li>
@@ -107,33 +220,34 @@
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<div class="text-block">
+			<div class="container">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Вернуться на сайт </span>
+								<meta itemprop="position"></a></li>
+					</ol>
+				</nav>
+			</div>
+			<div class="text-block text-block text-block--thanks">
 				<div class="container">
-					<p><strong>Основным направлением ООО &laquo;ВАКОМА РУС&raquo; является проектирование и&nbsp;изготовление редукторной техники</strong> с&nbsp;целью интеграции инженерных разработок ВАКОМА в&nbsp;российские и международные модернизационные проекты в&nbsp;области нефтедобычи, нефтепереработки, химии, нефтехимии, энергетики и&nbsp;металлургии с&nbsp;предложением Заказчикам следующей основной номенклатуры приводных машин:</p>
-					<ul>
-						<li>Тяжелонагруженные цилиндрические редукторы мощностью до&nbsp;5000&nbsp;кВт;</li>
-						<li>Редукторы экструдеров, экспеллеров, отжимных и&nbsp;сушильных машин;</li>
-						<li>Высокоскоростные мультипликаторы (турборедукторы) для газотурбинных установок, дожимных компрессорных установок и&nbsp;турбодетандеров;</li>
-						<li>Мультипликаторы нагнетателей и&nbsp;центробежных компрессоров;</li>
-						<li>Мультипликаторы для горизонтальных насосных установок;</li>
-						<li>Модернизированные редукторы для аппаратов воздушного охлаждения (АВО), станков-качалок и&nbsp;систем цепного привода;</li>
-						<li>Аналоги редукторов и&nbsp;зубчатых пар отечественных и&nbsp;иностранных производителей.</li>
-					</ul>
-					<p>Изготовление оборудования ведется как на&nbsp;основании предоставленной конструкторской документации Заказчиком, а&nbsp;также по&nbsp;собственному инжинирингу на&nbsp;основании проведенных геометрических замеров действующего оборудования с&nbsp;сохранением посадочных мест и&nbsp;присоединительных размеров.</p>
+					<?php
+						$name="";
+						if(isset($_POST['name'])) {
+								$name= $_POST['name']
+									?> 
+								<h1 class=" h2 text-center"><?php echo $name; ?>, спасибо, мы&nbsp;приняли вашу заявку!</h1>
+								<?php
+							}
+							else{	?> 
+								<h2  class=" h2 text-center">Cпасибо, мы&nbsp;приняли вашу заявку!</h2>
+									<?php
+							}	?> 
+					
+					<div class="h4 text-center">Наш специалист перезвонит и ответит на ваши вопросы.</div>
+					<div class="h4 text-center">Удачного дня!</div>
 				</div>
 			</div>
 			<!-- /.text-block-->
-			<!-- start s-img-->
-			<div class="s-img s-img--sl" id="s-img">
-				<div class="container">
-					<div class="slider-js">
-						<div class="slider-js__slider-item"><a href="img/@2x/prod-2.jpg" data-fancybox="slider-item"><img src="img/@2x/prod-2.jpg" alt=""/></a>
-						</div>
-						<div class="slider-js__slider-item"><a href="img/@2x/prod-3.jpg" data-fancybox="slider-item"><img src="img/@2x/prod-3.jpg" alt=""/></a>
-						</div>
-					</div>
-				</div>
-			</div>
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="row">

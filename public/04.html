@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Новость</title>
-		<meta name="description" content="о чем страница">
+		<meta name="description" content="">
+		<meta name="Keywords" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
 		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
@@ -25,6 +26,30 @@
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+								<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Главная</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Технические возможности</a>
+									</li>
+									<li class="menu-mobile__item active" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Новости</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Редукторы и мультипликаторы</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Зубчатые передачи и&nbsp;комплектующие</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link text-warning" href="#" itemprop="url">Импортозамещение</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
+									</li>
+								</ul>
+					<div class="text-right"></div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start topLine-->
 			<div class="topLine" id="topLine">
 				<div class="container">
@@ -32,37 +57,13 @@
 						<div class="topLine__mob col-auto align-self-center d-block d-lg-none">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 							</div>
-							<div class="menu-mobile menu-mobile--js d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-								</div>
-								<div class="menu-mobile__inner">
-												<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-													<li class="menu-mobile__item active" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Главная</a>
-													</li>
-													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Технические возможности</a>
-													</li>
-													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Новости</a>
-													</li>
-													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Редукторы и мультипликаторы</a>
-													</li>
-													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Зубчатые передачи и&nbsp;комплектующие</a>
-													</li>
-													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Импортозамещение</a>
-													</li>
-													<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
-													</li>
-												</ul>
-									<div class="text-right"></div>
-								</div>
-							</div>
-							<!--  мобильное меню-->
 						</div>
-						<div class="topLine__col col col-md-7">
-							<div class="topLine__logo">
-								<div class="topLine__pferde-wrap"><img class="res-i" src="img/@2x/pferde.png" alt=""/>
-								</div><a class="topLine__vacoma" href="#"><img class="res-i" src="img/@2x/logo.png" alt=""/>
-								<p>Ваше&nbsp;ателье&nbsp;в&nbsp;области&nbsp;редукторостроения</p></a>
+						<div class="topLine__col col col-md-7"><a class="topLine__logo" href="/">
+							<div class="topLine__pferde-wrap"><img class="res-i" src="img/@2x/pferde.png" alt=""/>
 							</div>
+							<div class="topLine__vacoma"><img class="res-i" src="img/@2x/logo.png" alt=""/>
+								<p>Ваше&nbsp;ателье&nbsp;в&nbsp;области&nbsp;редукторостроения</p>
+							</div></a>
 						</div>
 						<div class="col-3 d-none d-lg-block align-self-center"><a class="topLine__write" href="mailto:office@vakoma.ru">
 							<svg class="icon icon-mail ">
@@ -71,7 +72,7 @@
 						</div>
 						<div class="col-2 text-right d-none d-lg-block">
 							<div class="topLine__contacts"><a class="topLine__nuber" href="tel:8(3519)23-54-00">8 (3519) <strong>23-54-00</strong></a><a class="topLine__call link-modal" href="#modal-call">Заказать звонок</a>
-								<div class="topLine__messengers"><a href="https://t.me/joinchat/AAAAAEaqwNfJ8lhEEfuFbg" target="_blank"><img src="img/telegram.png" alt="alt"/></a><a href="https://invite.viber.com/?g2=AQBJwWTp9zNKH0tCN%2BaR3jUoUCNs0KX%2FeFXQeOhR%2B8snqE7Z3r%2BM0vZrTovzcgzE" target="_blank"><img src="img/viber.png" alt="alt"/></a><a href="https://wa.me/+380-00-00-00-000" target="_blank"><img class="whatsapp" src="img/whatsapp.png" alt="alt"/></a>
+								<div class="topLine__messengers"><a href="https://t.me/wol1414" target="_blank"><img src="img/telegram.png" alt=""/></a><a href="viber://chat?number=79068988888" target="_blank"><img src="img/viber.png" alt=""/></a><a href="https://wa.me/79255420608" target="_blank"><img class="whatsapp" src="img/whatsapp.png" alt=""/></a>
 								</div>
 							</div>
 						</div>
@@ -88,17 +89,17 @@
 			<div class="top-nav block-with-lazy d-none d-lg-block">
 				<div class="container">
 								<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="top-nav__item active" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Главная</a>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Главная</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Технические возможности</a>
 									</li>
-									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Новости</a>
+									<li class="top-nav__item active" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Новости</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Редукторы и мультипликаторы</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Зубчатые передачи и&nbsp;комплектующие</a>
 									</li>
-									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Импортозамещение</a>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link text-warning" href="#" itemprop="url">Импортозамещение</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Контакты </a>
 									</li>
@@ -253,7 +254,7 @@
 											<li><a href="#">Тяжелонагруженные редукторы</a></li>
 											<li><a href="#">Мультипликаторы (турборедукторы)</a></li>
 											<li><a href="#">Зубчатые передачи и комплектующие</a></li>
-											<li><a href="#">Импортозамещение </a></li>
+											<li><a class="text-warning" href="#">Импортозамещение </a></li>
 											<li><a href="#">Контакты</a></li>
 										</ul>
 									</div>
@@ -268,7 +269,7 @@
 								</div>
 								<div class="col-md-6 col-xl-5">
 									<div class="footer__contacts"><a class="footer__number" href="tel:8(3519)23-54-00" target="_blank">8 (3519) <strong>23-54-00</strong></a><a class="footer__call link-modal" href="#modal-call">Заказать звонок</a>
-										<div class="footer__messengers"><a href="https://t.me/joinchat/AAAAAEaqwNfJ8lhEEfuFbg" target="_blank"><img src="img/telegram.png" alt="alt"/></a><a href="https://invite.viber.com/?g2=AQBJwWTp9zNKH0tCN%2BaR3jUoUCNs0KX%2FeFXQeOhR%2B8snqE7Z3r%2BM0vZrTovzcgzE" target="_blank"><img src="img/viber.png" alt="alt"/></a><a href="https://wa.me/+380-00-00-00-000"><img class="whatsapp" src="img/whatsapp.png" alt="alt"/></a>
+										<div class="footer__messengers"><a href="https://t.me/wol1414" target="_blank"><img src="img/telegram.png" alt=""/></a><a href="viber://chat?number=79068988888" target="_blank"><img src="img/viber.png" alt=""/></a><a href="https://wa.me/79255420608" target="_blank"><img class="whatsapp" src="img/whatsapp.png" alt=""/></a>
 										</div>
 									</div>
 								</div>
@@ -304,7 +305,7 @@
 					</div>
 					<input type="hidden" name="formwithtime" value="formwithtime"/>
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="text"/>
+						<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->

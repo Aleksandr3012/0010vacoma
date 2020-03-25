@@ -56,9 +56,9 @@ $theme-colors: map-merge(("primary": $primary,
     "secondary": $secondary,
     "success": $success,
     // "info":       $info,
-    // "warning":    $warning,
+    "warning": $warning,
     "danger": $danger,
-    // "light":      $light,
+    "light": $light,
     // "dark":       $dark
   ),
   $theme-colors);
@@ -111,7 +111,7 @@ $container-max-widths: (xs: 480px,
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px,
+  xl: 1230px,
   // xxl: 1340px
 ) !default;
 // Grid columns
@@ -140,23 +140,23 @@ $font-weight-base: $font-weight-normal !default;
 $line-height-base: rem(40) !default;
 
 // title 
-$h1-font-size:                rem(35px)  !default;
-$h2-font-size:                rem(35px)  !default;
-$h3-font-size:                rem(30px) !default;
-$h4-font-size:                rem(25px) !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default; 
+$h1-font-size: rem(35px) !default;
+$h2-font-size: rem(35px) !default;
+$h3-font-size: rem(30px) !default;
+$h4-font-size: rem(25px) !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
 
 
-$display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
-$display3-size:               4.5rem !default;
-$display4-size:               3.5rem !default;
+$display1-size: 6rem !default;
+$display2-size: 5.5rem !default;
+$display3-size: 4.5rem !default;
+$display4-size: 3.5rem !default;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display1-weight: 300 !default;
+$display2-weight: 300 !default;
+$display3-weight: 300 !default;
+$display4-weight: 300 !default;
 // $display-line-height:         $headings-line-height !default;
 
 $lead-font-size: $font-size-base * 1.25 !default;

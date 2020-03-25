@@ -47,9 +47,15 @@ $output-bourbon-deprecation-warnings: false;
 	@include media-breakpoint-up(md) {
 		// margin-left: -13px;
 	}
-	&-item a{
+
+	&-item a {
 		text-decoration: underline;
 	}
+
+	a {
+		outline: none !important;
+	}
+
 	.active {
 		a {
 			text-decoration: none !important;
@@ -57,6 +63,14 @@ $output-bourbon-deprecation-warnings: false;
 			pointer-events: none;
 		}
 	}
+}
+
+.breadcrumb-item+.breadcrumb-item {
+	padding-left: .16rem;
+}
+
+.breadcrumb-item+.breadcrumb-item:before {
+	padding-right: .16rem;
 }
 
 @import './node_modules/bootstrap/scss/pagination';

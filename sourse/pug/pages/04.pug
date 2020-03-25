@@ -11,20 +11,25 @@ block variables
 block title
 	- let  title= 'Новость'
 	title= title
+block description 
+	meta(name="description", content= "" )
+
+block keywords
+	meta(name="Keywords", content= "" )
 block pagecontent 
 	mixin menu()
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-			+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
 			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Технические возможности
-			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
 			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Редукторы и мультипликаторы
 			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Зубчатые передачи и&nbsp;комплектующие
-			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url").text-warning Импортозамещение
 			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Контакты 
 	//- +header()
+	+mob-mnu()
+		+menu()
 	+topLine()
-		+mob-mnu()
-			+menu()
 	+top-nav
 		+menu()
 	mixin bread()

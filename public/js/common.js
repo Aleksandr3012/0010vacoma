@@ -112,17 +112,6 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/08.png);"></div>');
 	// /добавляет подложку для pixel perfect
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {
@@ -157,33 +146,7 @@ function eventHandler() {
 			scrollTop: destination
 		}, 1100);
 		return false;
-	}); // $('.s-gal__slider\
-	// ,.slider-for2 ')
-	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
-	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	// 	});
-	// slider
-	// const swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// });
-	// modal window
-
+	});
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {
@@ -221,14 +184,40 @@ function eventHandler() {
 	$(".form-wrap__comment--js").click(function () {
 		$('.form-wrap__toggle-block--js').toggle();
 	}); //    const wow = new WOW({ mobile: false });
+	// $(' .breadcrumb').slick({
+	// 	// ...defaultSlide,
+	// 	// arrows: false,
+	// 	dots: false,
+	// 	arrows: false,
+	// 	variableWidth: true,
+	// 	infinite: false
+	// });
 
-	$(' .breadcrumb').slick({
-		// ...defaultSlide,
-		// arrows: false,
-		dots: false,
-		arrows: false,
-		variableWidth: true,
-		infinite: false
+	var gets = function () {
+		var a = window.location.search;
+		var b = new Object();
+		a = a.substring(1).split("&");
+
+		for (var i = 0; i < a.length; i++) {
+			var c = a[i].split("=");
+			b[c[0]] = c[1];
+		}
+
+		return b;
+	}(); // form
+
+
+	$("form").each(function () {
+		//Change
+		var th = $(this);
+		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
+		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
+		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
+		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+		$(this).attr({
+			"action": 'thanks.php',
+			"method": "post"
+		});
 	});
 }
 

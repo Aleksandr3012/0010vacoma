@@ -1,13 +1,15 @@
 mixin s-img()
 	// start s-img
-	+b.s-img#s-img&attributes(attributes)
+	+b.s-img--sl#s-img&attributes(attributes)
 		.container
-			.row
-				.col-md-6
-					img.res-i(src="img/@2x/prod-1.jpg", alt="")
-				.col-md-6
-					img.res-i(src="img/@2x/prod-2.jpg", alt="")
-
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-3.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-3.jpg" alt="")
+		 
 mixin s-img-sl()
 	+b.s-img--sl#s-img&attributes(attributes)
 		.container
