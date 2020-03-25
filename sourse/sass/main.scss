@@ -44,6 +44,9 @@ $output-bourbon-deprecation-warnings: false;
 	@include media-breakpoint-up(md) {
 		margin-left: -13px;
 	}
+	&-item a{
+		text-decoration: underline;
+	}
 	.active {
 		a {
 			text-decoration: none !important;

@@ -121,6 +121,47 @@
 		}
 	}
 
+	&--gearboxes {
+		padding-top: rem(30) !important;
+		.h2 {
+			margin-bottom: rem(28);
+		}
+
+		p {
+			letter-spacing: rem(0.65px);
+			margin-bottom: rem(19);
+		}
+
+		ul {
+			margin-top: rem(-13);
+		}
+
+		li {
+			&::after {
+				left: rem(-31px);
+				top: rem(11px);
+
+				@include media-breakpoint-up(md){
+				top: rem(14px);
+				}
+			}
+		}
+	}
+
+	&--thanks {
+		padding-bottom: rem(147);
+
+		.h2 {
+			padding-top: rem(24);
+			margin-bottom: 0;
+		}
+
+		.h4 {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
