@@ -1,9 +1,50 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+b.contactBlock
+				+e.adres
+					+e.icon-wrap
+						+icon('maps-and-flags')
+					p 455051, Челябинская область,<br>г. Магнитогорск, ул. Жукова, д.2, корп.4
+				+e.contacts
+					+e.telephone
+						+icon('telephone')
+						p тел./факс:
+							a.strong(href="tel:+7(3519)23-54-00") +7 (3519) 23-54-00 
+					+e.mail
+						+icon('mail-2')
+						p email: 
+							a.strong(href="mailto:office@vakoma.ru") office@vakoma.ru
+					+e.connection
+			.h4.text-center Контактные лица
+			.row.justify-content-center
+				.col-lg-6.col-xl-5
+					+b.contactBlock--person
+						ul
+							li Директор ООО&nbsp;&laquo;Вакома&nbsp;РУС&raquo;
+						+e.name Капитанский Сергей Анатольевич
+						+e.contacts
+							+e.telephone
+								+icon('telephone')
+								p Моб. тел.:
+									a.strong(href="tel:++7(904)9343825") +7 (904) 934 38 25 
+							+e.mail
+								+icon('mail-2')
+								p Email: 
+									a(href="mailto:ks.vakoma@mail.ru") ks.vakoma@mail.ru
+				.col-lg-6.col-xl-5
+					+b.contactBlock--person
+						ul
+							li Руководитель проектов ООО&nbsp;&laquo;Вакома&nbsp;РУС&raquo;
+						+e.name Дивнич Петр Николаевич
+						+e.contacts
+							+e.telephone
+								+icon('telephone')
+								p Моб. тел.:
+									a.strong(href="tel:+7(912)3030333") +7 (912) 303 03 33
+							+e.mail
+								+icon('mail-2')
+								p Email: 
+									a(href="mailto:pd.vakoma@mail.ru") pd.vakoma@mail.ru
 	// end sContact

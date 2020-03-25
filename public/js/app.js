@@ -1,6 +1,6 @@
 "use strict";
 
-// .footer scripts goes here
+
 var headerBlockVue = new Vue({
 	el: '#headerBlock',
 	data: {

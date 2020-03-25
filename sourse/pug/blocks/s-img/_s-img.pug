@@ -4,9 +4,27 @@ mixin s-img()
 		.container
 			.row
 				.col-md-6
-					img.res-i(src="img/prod-1.png", alt="")
+					img.res-i(src="img/@2x/prod-1.jpg", alt="")
 				.col-md-6
-					img.res-i(src="img/prod-2.png", alt="")
+					img.res-i(src="img/@2x/prod-2.jpg", alt="")
 
-
+mixin s-img-sl()
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-1.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-1.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-1.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-1.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
 	// end s-img
