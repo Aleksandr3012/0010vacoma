@@ -20,6 +20,7 @@ html {
 
 body,
 html {
+
 	font-size: $em-base;
 	// @include font-size(1rem);
 }
@@ -550,5 +551,13 @@ table {
 
 	table {
 		min-width: 650px;
+	}
+}
+
+.slick-active {
+	&:first-child {
+		&:last-child {
+			display: none;
+		}
 	}
 }

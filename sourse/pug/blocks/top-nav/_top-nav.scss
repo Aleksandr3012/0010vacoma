@@ -47,13 +47,22 @@
 		// text-align: left;
 		color: #fff;
 		text-decoration: none !important;
-		font-size: $small;
+
+		@include media-breakpoint-up(xl) {
+
+			font-size: rem(17.6);
+		}
+
+		font-size: rem(13);
 		line-height: rem(18);
 		// display: block;
 		@include mt;
+		text-align: left;
+
 		&:hover {
-			color: $yellow;
-			background-color:  $ultramarine;
+			color: #fff;
+			// color: $yellow;
+			background-color: $ultramarine;
 		}
 	}
 

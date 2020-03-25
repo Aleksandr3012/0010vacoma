@@ -86,6 +86,7 @@ $h: em(2);
 	transform: translate(120%, 0);
 	@include mt(0.6);
 	will-change: transform;
+	color: #ffffff;
 
 	&__inner {
 		background-color: $primary;
@@ -112,10 +113,12 @@ $h: em(2);
 	&__link {
 		color: #fff;
 		text-decoration: none !important;
+
 		&:hover,
 		&:active,
 		&:focus {
-			color: $yellow;
+			// color: $yellow;
+			color: #ffffff;
 		}
 	}
 
@@ -159,7 +162,7 @@ $h: em(2);
 		a {
 			// font-size: 16px;
 
-			padding: 10px;
+			padding: 10px rem(18);
 			display: block;
 		}
 	}
