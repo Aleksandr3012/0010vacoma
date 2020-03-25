@@ -118,7 +118,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/05.png);"></div>');
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/06.png);"></div>');
 	// /добавляет подложку для pixel perfect
 
 
@@ -181,33 +181,33 @@ function eventHandler() {
 		return false;
 	});
 
-	$('.s-gal__slider\
-	,.slider-for2 ')
-		.on('lazyLoaded', function (event, slick, image, imageSource) {
-			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-		});
-	slider
-	const swiper4 = new Swiper('.color-slider', {
-		// slidesPerView: 5,
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true,
-		watchOverflow: true,
-		slidesPerGroup: 3,
+	// $('.s-gal__slider\
+	// ,.slider-for2 ')
+	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
+	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+	// 	});
+	// slider
+	// const swiper4 = new Swiper('.color-slider', {
+	// 	// slidesPerView: 5,
+	// 	slidesPerView: 'auto',
+	// 	watchOverflow: true,
+	// 	spaceBetween: 0,
+	// 	freeMode: true,
+	// 	watchOverflow: true,
+	// 	slidesPerGroup: 3,
 
-		// centeredSlides: true,
-		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
+	// 	// centeredSlides: true,
+	// 	loop: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
 
-	});
+	// });
 	// modal window
 
 
@@ -219,6 +219,39 @@ function eventHandler() {
 
 	}
 
+	const icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve"><g><path fill="#ffffff" d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225 c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>';
+	const arrl2 = (' <div class="r">' + icon),
+		arrr2 = (' <div class="l">' + icon);
+
+	//Проверял работу js
+	// $('.main-wrapper').click(function (){
+	// 	$(this).addClass('d-none');
+	// });
+
+	//slider
+	$('.slider-js').slick({
+		// ...defaultSlide,
+		mobileFirst: true,
+		infinite: true,
+		autoplaySpeed: 6000,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		speed: 600,
+		arrows: true,
+		dots: true,
+		slidesToShow: 1,
+		slidesToScroll: 2,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+		]
+	});
+
+
 	//показывает инпут при клике на текст
 	$(".form-wrap__comment--js").click(function () {
 		$('.form-wrap__toggle-block--js').toggle();
@@ -226,7 +259,7 @@ function eventHandler() {
 
 	//    const wow = new WOW({ mobile: false });
 	$(' .breadcrumb').slick({
-		...defaultSlide,
+		// ...defaultSlide,
 		// arrows: false,
 		dots: false,
 		arrows: false,

@@ -9,6 +9,11 @@
 
 		img {
 			margin-bottom: rem(10);
+			box-shadow: 6px 6px 9px 1px rgba(22, 67, 124, 0.15);
+		}
+
+		&--sl {
+			padding-bottom: rem(74);
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
