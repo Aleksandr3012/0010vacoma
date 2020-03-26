@@ -124,6 +124,12 @@ $h: em(2);
 			// color: $yellow;
 			color: #ffffff;
 		}
+
+		&.text-warning {
+			&:hover {
+				color: $yellow !important;
+			}
+		}
 	}
 
 	.dropdown .menu-mobile__link{
