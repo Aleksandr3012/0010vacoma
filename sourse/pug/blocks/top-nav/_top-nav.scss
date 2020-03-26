@@ -231,7 +231,10 @@
 	&::before {
 		content: '';
 		position: absolute;
-		right: 1%;
+		right: 3%;
+		@include media-breakpoint-up(xl){
+			right: 1%;
+		}
 		width: rem(30);
 		top: rem(19);
 		height: rem(30);
