@@ -2,7 +2,7 @@
 	// position: absolute;
 	top: 100%;
 	background-color: $primary;
-	@include roww(0);
+	// @include roww(0);
 	// @include clearfix;ss
 	z-index: 20;
 	@include mt;
@@ -35,7 +35,12 @@
 		display: block;
 		position: relative;
 		list-style-type: none;
+
 		width: 100%;
+
+		&:nth-child(2) span{
+			padding-left: rem(22);
+		}
 	}
 
 	.dropdown {
@@ -52,6 +57,10 @@
 		cursor: pointer;
 		justify-content: center;
 		align-items: center;
+		span {
+			display: block;
+			text-align: left;
+		}
 		// text-align: left;
 		color: #fff;
 		text-decoration: none !important;
@@ -64,12 +73,17 @@
 		line-height: rem(18);
 		// display: block;
 		@include mt;
-		text-align: left;
 
 		&:hover {
 			color: #fff;
 			// color: $yellow;
 			background-color: $ultramarine;
+		}
+
+		&.text-warning {
+			&:hover {
+				color: $yellow !important;
+			}
 		}
 	}
 
@@ -144,7 +158,10 @@
 		box-shadow: 0 0 23px 12px rgba(192, 192, 192, 0.07);
 		border: 5px solid #f0f0f0;
 	}
-	min-width: rem(300);
+	min-width: rem(240);
+	@include media-breakpoint-up(xl){
+		min-width: rem(310);
+	}
 
 	&__item {
 		position: relative;
@@ -168,7 +185,7 @@
 		overflow: hidden;
 		display: block;
 		text-decoration: none !important;
-		min-width: rem(300);
+		min-width: rem(200);
 		&::before {
 			content: '';
 			z-index: -1;
@@ -185,7 +202,7 @@
 		@include media-breakpoint-up(lg) {
 			// padding: rem(10);
 			padding: 0.8rem 0.45rem;
-			text-align: center;
+			text-align: left;
 			&.active,
 			&:hover {
 				&::before {
