@@ -38,8 +38,12 @@
 
 		width: 100%;
 
-		&:nth-child(2) span{
+		&:nth-child(2) span {
 			padding-left: rem(22);
+		}
+
+		&.dropdown .top-nav__link {
+			padding-right: rem(19);
 		}
 	}
 
@@ -159,7 +163,7 @@
 		border: 5px solid #f0f0f0;
 	}
 	min-width: rem(240);
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-up(xl) {
 		min-width: rem(310);
 	}
 
@@ -227,7 +231,10 @@
 	&::before {
 		content: '';
 		position: absolute;
-		right: 6%;
+		right: 3%;
+		@include media-breakpoint-up(xl){
+			right: 1%;
+		}
 		width: rem(30);
 		top: rem(19);
 		height: rem(30);
