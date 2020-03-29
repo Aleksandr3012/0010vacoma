@@ -187,7 +187,9 @@
 			border-radius: 5px;
 			border: 1px solid #f6f6f6;
 			background-color: #f4f4f4;
-			color: #b2b2b2;
+			&::-webkit-input-placeholder {
+				color: #b2b2b2;
+			}
 			font-size: $small;
 			font-weight: 400;
 			letter-spacing: rem(0.36px);
@@ -225,7 +227,6 @@
 			padding: rem(26);
 			font-size: $small;
 			letter-spacing: rem(0.36px);
-			color: #b2b2b2;
 			font-weight: 400;
 		}
 
