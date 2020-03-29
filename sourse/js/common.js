@@ -217,7 +217,7 @@ function eventHandler() {
 
 	$( '.menu-mobile__nav .dropdown  ').click(function (){
 			$('.drop').slideToggle();
-			return false;
+			// return false;
 	});
 
 	//    const wow = new WOW({ mobile: false });

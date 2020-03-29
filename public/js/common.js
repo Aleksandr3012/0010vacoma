@@ -188,8 +188,7 @@ function eventHandler() {
 		$(this).append('<div class="toggle-l"></div>');
 	});
 	$('.menu-mobile__nav .dropdown  ').click(function () {
-		$('.drop').slideToggle();
-		return false;
+		$('.drop').slideToggle(); // return false;
 	}); //    const wow = new WOW({ mobile: false });
 	// $(' .breadcrumb').slick({
 	// 	// ...defaultSlide,
