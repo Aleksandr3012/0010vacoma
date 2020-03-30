@@ -1,0 +1,77 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Импортозамещение — ООО Вакома РУС'
+	title= title
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "Импортозамещение, Корпуса редукторов, Зубчатые передачи, Системы смазки, Подшипники, main metall, mordacci, skf, fag, timken, evolmec " )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item.active( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+
+
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+	.container
+		nav(aria-label="breadcrumb" )
+			ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+				li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='index.html' itemprop="item" )
+						span( itemprop="name") Главная 
+						meta(itemprop="position" )
+				li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='#' itemprop="item" )
+						span( itemprop="name") Импортозамещение
+						meta(itemprop="position" )
+	+text()(class="text-block--smList")
+		.container
+			h1.h2.text-center Импортозамещение
+			p Изготовление комплектных редукторов и&nbsp;зубчатых передач как импортного производства, так и&nbsp;стран бывшего СНГ .
+			p Изготовление ведется как по&nbsp;чертежам и&nbsp;техническому заданию Заказчика, так и&nbsp;на&nbsp;основании собственной конструкторской документации, разработанной на&nbsp;основании проведенных геометрических замеров оборудования специалистами нашей компании на&nbsp;предприятии Заказчика.
+			p Для достижения оптимального общего решения важнейшую роль играют отдельные компоненты. Симуляция нагрузок конструктивных элементов и&nbsp;узлов методом конечных элементов в&nbsp;настоящее время является уже стандартом для нашей компании. Конструирование ведется с&nbsp;привлечением опытных конструкторов, специалистов по&nbsp;материалам и&nbsp;инженеров сварки, работающих в&nbsp;нашем конструкторском бюро. Проектирование осуществляется в&nbsp;системах T-FLEX CAD и&nbsp;KISSsoft в&nbsp;соответствии с&nbsp;ГОСТ, ЕСКД и&nbsp;другой нормативной документацией
+			ul
+				li Корпуса редукторов:
+			p Крутильно-жесткие, недеформируемые, сварной конструкции (рассчитаны в&nbsp;соответствии с&nbsp;МКЭ); При серийном производстве возможно изготовление корпусов методом литья. Функционально важные места снабжены контрольно-измерительными приборами с&nbsp;цифровыми датчиками сигналов производства фирм Bently Nevada, JUMO серии&nbsp;Pt либо других производителей по&nbsp;согласованию с&nbsp;Заказчиком. Изготовление корпусной части редукторов ведется с&nbsp;учетом дальнейшего монтажа и&nbsp;установки оборудования на&nbsp;существующие фундаменты.
+			ul
+				li Зубчатые передачи:
+			p Расчёт зубчатых передач производятся автоматизировано (Расчет на&nbsp;выносливость по&nbsp;контактным напряжениям, расчет на&nbsp;выносливость по&nbsp;напряжениям изгиба, расчет на&nbsp;действие пиковых нагрузок) с&nbsp;учетом фактических условий эксплуатации и&nbsp;с&nbsp;сохранением всех технических характеристик, геометрических размеров и&nbsp;привязок к&nbsp;действующему оборудованию. При проектировании нового редуктора выбор числа ступеней, подбор межосевых расстояний, разбивка передаточного числа по&nbsp;ступеням производится так, чтобы вес редуктора был минимальным, ступени были равнопрочными и&nbsp;имели больший запас прочности по&nbsp;сравнению с&nbsp;аналогами. Материал изготовления зубчатых пар: усовершенствованные марки CrNiMo сплавов, имеющие повышенные характеристики. Зубчатые зацепления подвержены высокоточной обработке, закалены, цементовано-шлифованы и&nbsp;динамически отбалансированы.
+			ul
+				li Системы смазки:
+			p Применяется для обеспечения надежной работы редуктора. Производится расчет необходимого расхода для каждой точки. Предусматривается возможность регулировки с&nbsp;перераспределением расхода. Системы смазки комплектуются шестеренчатыми маслонасосами KRACHT. В&nbsp;случаях внешней системы применяются выносные элементы PARKER.
+			ul
+				li Подшипники:
+			p В зависимости от характера трения зубчатые передачи и комплектные редукторы комплектуются подшипниками скольжения или качения от ведущих мировых производителей (MAIN METALL, MORDACCI, SKF, FAG, TIMKEN, EVOLMEC и др). Подшипниковые узлы оснащены датчиками контроля температуры.
+	+s-img-imp
+	+footer()

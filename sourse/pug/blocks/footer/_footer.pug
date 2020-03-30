@@ -1,40 +1,44 @@
 mixin footer()
+	//- Скролл вверх
+	.to-top-js
+		img(src="img/to-top.png", alt="to-top")
+	//- footer 
 	+b.FOOTER.footer.block-with-lazy
 		.container
 			.row
 				.col-lg-7
 					.row.justify-content-between
 						.col-md
-							+e.A.logo(href="#")
+							+e.A.logo(href="index.html")
 								+e.img-wrap
-									img(src="img/logo-2.png", alt="")
+									img(src="img/logo-2.png", alt="вакома логотип")
 								+e.logo-title Ваше ателье в области редукторостроения
 							p Копирование материала сайта только с&nbsp;письменного&nbsp;согласия собственника сайта
 							+e.secondary-menu.d-none.d-md-block
 								ul
 									li
-										a(href="#") Политика конфиденциальности
+										a(href="privacy-policy.pdf") Политика конфиденциальности
 									li
-										a(href="#") Пользовательское соглашение
+										a(href="processing-conditions.pdf") Пользовательское соглашение
 									li
-										a(href="#") Карта сайта
+										a(href="sitemap.xml") Карта сайта
 						+e.coll.col-md
 							+e.menu
 								ul
 									li
-										a(href="#") Технические возможности
+										a(href="tehnicheskie-vozmojnosti.html") Технические возможности
 									li
-										a(href="#") Новости
+										a(href="novosti.html") Новости
 									li
-										a(href="#") Тяжелонагруженные редукторы
+										a(href="tyajelonagrujennie-reduktori.html") Тяжелонагруженные редукторы
 									li
-										a(href="#") Мультипликаторы (турборедукторы)
+										a(href="turboreduktori.html") Мультипликаторы (турборедукторы)
 									li
-										a(href="#") Зубчатые передачи и комплектующие
+										a(href="zubchatie-peredachi.html") Зубчатые передачи и комплектующие
 									li
-										a(href="#").text-warning Импортозамещение 
+										a(href="importozameshenie.html").text-warning Импортозамещение 
 									li
-										a(href="#") Контакты
+										a(href="kontakti.html") Контакты
 
 				.col-lg
 					.row
@@ -51,15 +55,16 @@ mixin footer()
 							+e.secondary-menu.d-block.d-md-none
 								ul
 									li
-										a(href="#") Политика конфиденциальности
+										a(href="privacy-policy.pdf") Политика конфиденциальности
 									li
-										a(href="#") Пользовательское соглашение
+										a(href="processing-conditions.pdf") Пользовательское соглашение
 									li
-										a(href="#") Карта сайта
-							+e.text Создание и&nbsp;продвижение  сайта: #[a(href="#" target="_blank")  Студия &laquo;Барс&raquo;] 
+										a(href="sitemap.xml") Карта сайта
+							+e.text Создание и&nbsp;продвижение  сайта: #[a(href="https://studiobars.ru" target="_blank")  Студия &laquo;Барс&raquo;] 
 						.col-md-6
-							+b.develop-link(href="#" target="_blank")
+							+b.develop-link(href="https://studiobars.ru" target="_blank")
 								+e.panel
-									img.img-1(src="img/svg/hand.svg", alt="")
-									img.img-2(src="img/svg/logo-text.svg", alt="")
+									img.img-1(src="img/svg/hand.svg", alt="studiobars")
+									img.img-2(src="img/svg/logo-text.svg", alt="studiobars")
+
 

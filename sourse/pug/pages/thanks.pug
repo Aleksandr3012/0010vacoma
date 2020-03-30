@@ -10,8 +10,7 @@ block variables
 block title
 	- let  title= 'Cпасибо'
 	title= title
-block description 
-	meta(name="description", content= "" )
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
 
 block keywords
 	meta(name="Keywords", content= "" )
@@ -132,24 +131,24 @@ block php
 block pagecontent 
 	mixin menu()
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
 				span Главная
-			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
 				span Технические возможности
-			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 
+			+e.LI.item( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
 				span Новости
 			+e.LI.item.dropdown( itemprop="item" ): +e.link 
 				span Редукторы и&nbsp;мультипликаторы
 				+b.UL.drop
 					+e.LI.item
-						+e.A.link(href="#" itemprop="url") Тяжелонагруженные редукторы
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
 					+e.LI.item
-						+e.A.link(href="#" itemprop="url") Мультипликаторы (турборедукторы)
-			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
 				span Зубчатые передачи и&nbsp;комплектующие
-			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="#"  itemprop="url")
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
 				span Импортозамещение
-			+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") 
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
 				span Контакты
 
 

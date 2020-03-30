@@ -561,3 +561,13 @@ table {
 		}
 	}
 }
+
+.to-top-js {
+	bottom: 0;
+	cursor: pointer;
+	display: none;
+	font-size: 150%;
+	position: fixed;
+	right: 0;
+	z-index: 2;
+}
