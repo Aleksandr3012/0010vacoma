@@ -2,7 +2,7 @@
 	// position: absolute;
 	top: 100%;
 	background-color: $primary;
-	@include roww(0);
+	// @include roww(0);
 	// @include clearfix;ss
 	z-index: 20;
 	@include mt;
@@ -33,8 +33,24 @@
 
 	&__item {
 		display: block;
+		position: relative;
 		list-style-type: none;
+
 		width: 100%;
+
+		&:nth-child(2) span {
+			padding-left: rem(22);
+		}
+
+		&.dropdown .top-nav__link {
+			padding-right: rem(19);
+		}
+	}
+
+	.dropdown {
+		&:hover .drop {
+			display: flex;
+		}
 	}
 
 	&__link {
@@ -42,18 +58,36 @@
 		height: rem(60);
 		padding: rem(10);
 		display: flex;
+		cursor: pointer;
 		justify-content: center;
 		align-items: center;
+		span {
+			display: block;
+			text-align: left;
+		}
 		// text-align: left;
 		color: #fff;
 		text-decoration: none !important;
-		font-size: $small;
+
+		@include media-breakpoint-up(xl) {
+			font-size: rem(17.6);
+		}
+
+		font-size: rem(13);
 		line-height: rem(18);
 		// display: block;
 		@include mt;
+
 		&:hover {
-			color: $yellow;
-			background-color:  $ultramarine;
+			color: #fff;
+			// color: $yellow;
+			background-color: $ultramarine;
+		}
+
+		&.text-warning {
+			&:hover {
+				color: $yellow !important;
+			}
 		}
 	}
 
@@ -61,39 +95,156 @@
 		background-color: $blue;
 	}
 
-	// 
-	@include media-breakpoint-up(xl) {}
+	//
+	@include media-breakpoint-up(xl) {
+	}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+	}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(xs) {
+	}
 
-	// 
-	@include media-breakpoint-between(md, xl) {}
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
 
-	// 
-	@include media-breakpoint-only(xs) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(md) {
+	}
 
-	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-only(xl) {
+	}
 
-	// 
-	@include media-breakpoint-down(xl) {}
+	//
+	@include media-breakpoint-down(xl) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(lg) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(md) {
+	}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(xs) {
+	}
+}
+
+.drop {
+	display: none;
+	// display: flex;
+	flex-direction: column;
+	position: absolute;
+	overflow: hidden;
+	top: 100%;
+	left: 0;
+	border-radius: rem(10);
+	@include media-breakpoint-up(lg) {
+		background-color: #fff;
+		box-shadow: 0 0 23px 12px rgba(192, 192, 192, 0.07);
+		border: 5px solid #f0f0f0;
+	}
+	min-width: rem(240);
+	@include media-breakpoint-up(xl) {
+		min-width: rem(310);
+	}
+
+	&__item {
+		position: relative;
+
+		@include media-breakpoint-up(lg) {
+			// padding: rem(10);
+		}
+	}
+
+	li {
+		list-style: none;
+	}
+
+	&__link {
+		// padding: rem(10) rem(15);
+		@include media-breakpoint-down(md) {
+			color: #fff !important;
+		}
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+		display: block;
+		text-decoration: none !important;
+		min-width: rem(200);
+		&::before {
+			content: '';
+			z-index: -1;
+			left: 0;
+			top: 0;
+			position: absolute;
+			// border-radius: rem(10px);
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			@include mt;
+			background-image: linear-gradient(-10deg, $primary 0%, $blue 100%);
+		}
+		@include media-breakpoint-up(lg) {
+			// padding: rem(10);
+			padding: 0.8rem 0.45rem;
+			text-align: left;
+			&.active,
+			&:hover {
+				&::before {
+					opacity: 1;
+				}
+				background-color: transparent;
+				color: #fff;
+				.icon {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.top-nav__link {
+		display: none;
+	}
+}
+
+.dropdown {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		right: 3%;
+		@include media-breakpoint-up(xl){
+			right: 1%;
+		}
+		width: rem(30);
+		top: rem(19);
+		height: rem(30);
+		@include media-breakpoint-up(md) {
+			top: rem(26);
+		}
+		@include media-breakpoint-up(lg) {
+			@include a-cent(y);
+		}
+		@include triangle(12px, white, down);
+		// @include triangle(12px 6px, gray lavender, up-left);
+	}
 }

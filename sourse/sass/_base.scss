@@ -12,7 +12,7 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0;
+	background-position: center 0px;
 	// background-position: center -194px; //footer
 	opacity: 0;
 	// opacity: 0.7;
@@ -20,6 +20,7 @@ html {
 
 body,
 html {
+
 	font-size: $em-base;
 	// @include font-size(1rem);
 }
@@ -513,4 +514,60 @@ a {
 	min-height: 100px;
 	font-size: 20px;
 	color: #ffffff;
+}
+
+table {
+	width: 100%;
+	font-size: rem(15);
+	margin-top: rem(60);
+	margin-bottom: rem(60);
+
+
+	th,
+	td {
+		border: 2px solid #fff;
+		padding: rem(5) rem(10);
+		line-height: 1.2;
+		height: rem(45);
+
+		&.col-2 {
+			width: (100% * 2 / 12);
+
+		}
+
+		&.col-5 {
+			width: (100% * 5 / 12);
+		}
+	}
+
+	.bg-info {
+		color: $primary;
+	}
+}
+
+.table-wrap {
+	position: relative;
+	overflow-x: auto;
+
+	table {
+		min-width: 650px;
+	}
+}
+
+.slick-active {
+	&:first-child {
+		&:last-child {
+			display: none;
+		}
+	}
+}
+
+.to-top-js {
+	bottom: 0;
+	cursor: pointer;
+	display: none;
+	font-size: 150%;
+	position: fixed;
+	right: 0;
+	z-index: 2;
 }

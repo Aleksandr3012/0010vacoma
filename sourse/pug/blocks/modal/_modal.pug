@@ -1,46 +1,16 @@
 
 mixin modal() 
  
-	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
-		
-	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
-				
-	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
-	//- 			+b.wrap-polite
-	//- 				+b.custom-input.polite
-	//- 					+b.LABEL.custom-input.polite
-	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
-	//- 						+e.SPAN.lab
-	//- 						| Даю 
-	//- 						| 
-	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
-
-	//- 						| на хранение и обработку   персональных данных
-	
- 
-
-	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
-	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			br
-	//- 			.h2 Заявка принята
-	//- 			br
-	//- 			.h3 Скоро с Вами свяжутся
-	//- 			br 
 	.d-none
 		+form-wrap()(id="modal-call" class="  modal-win--call modal-form" ) 
 			+e.top-title Для оформления заказа оставьте ваши контакты
 			//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
 			//- +e.text--sm Специалист компании Александр позвонит вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем пн-пт с&nbsp;10:00 до&nbsp;18:00
 			input(type="hidden" name="formwithtime" value="formwithtime") 
-			+input('Иван', 'text', 'Как к вам обращаться?')
+			+input('Иван', 'text', 'Как к вам обращаться?','name')
 			+form-tabs()
 			+e.input-wrapper
-				+e.comment--js.text-center Напишите комментарии, если хотите
+				+e.comment--js.text-center Задайте вопрос, если есть
 				+e.toggle-block--js
 					+input('Текст сообщения', 'textarea')
 			+e.btn(type='submit') Заказать звонок

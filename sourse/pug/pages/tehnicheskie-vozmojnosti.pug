@@ -1,0 +1,712 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Технические возможности — ООО Вакома РУС'
+	title= title
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "вакома Технические возможности, Технические возможности vakoma, Тяжелонагруженные цилиндрические редукторы, Редукторы экструдеров, Редукторы экспеллеров, Редукторы отжимных, Редукторы сушильных машин, Высокоскоростные мультипликаторы, турборедукторы, Мультипликаторы нагнетателей, Мультипликаторы центробежных компрессоров, Мультипликаторы для насосных установок, Модернизированные редукторы, Аналоги редукторов, Аналоги зубчатых пар" )
+
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+	.container
+		nav(aria-label="breadcrumb" )
+			ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+				li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='index.html' itemprop="item" )
+						span( itemprop="name") Главная 
+						meta(itemprop="position" )
+				li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					a(href='#' itemprop="item" )
+						span( itemprop="name") Технические возможности
+						meta(itemprop="position" )
+	+text()(class="text-block--inner")
+		.container
+			h1.h2.text-center Технические возможности
+			p #[span.fw-500 Основным направлением ООО &laquo;ВАКОМА РУС&raquo; является проектирование и&nbsp;изготовление редукторной техники] с&nbsp;целью интеграции инженерных разработок ВАКОМА в&nbsp;российские и&nbsp;международные модернизационные проекты в&nbsp;области нефтедобычи, нефтепереработки, химии, нефтехимии, энергетики и&nbsp;металлургии с&nbsp;предложением Заказчикам следующей основной номенклатуры приводных машин:
+			ul
+				li Тяжелонагруженные цилиндрические редукторы мощностью до&nbsp;5000&nbsp;кВт;
+				li Редукторы экструдеров, экспеллеров, отжимных и&nbsp;сушильных машин;
+				li Высокоскоростные мультипликаторы (турборедукторы) для газотурбинных установок, дожимных компрессорных установок и&nbsp;турбодетандеров;
+				li Мультипликаторы нагнетателей и&nbsp;центробежных компрессоров;
+				li Мультипликаторы для горизонтальных насосных установок;
+				li Модернизированные редукторы для аппаратов воздушного охлаждения (АВО), станков-качалок и&nbsp;систем цепного привода;
+				li Аналоги редукторов и&nbsp;зубчатых пар отечественных
+			p Изготовление оборудования ведется как на&nbsp;основании предоставленной конструкторской документации Заказчиком, а&nbsp;также по&nbsp;собственному инжинирингу на&nbsp;основании проведенных геометрических замеров действующего оборудования с&nbsp;сохранением посадочных мест и&nbsp;присоединительных размеров.
+			p Полный цикл технологической цепочки изготовления оборудования и&nbsp;запасных частей бренда &laquo;ВАКОМА РУС&raquo; идет под контролем технических специалистов ВАКОМА с&nbsp;последующей сборкой и&nbsp;отгрузкой потребителю готовой продукции, имеющей российский сертификат происхождения, листы контрольных замеров готовых изделий, сертификаты на&nbsp;материалы, термообработку, протоколы балансировки и&nbsp;т.д. (в&nbsp;зависимости от&nbsp;предмета исполняемого контракта).
+			p Основной отличительной особенностью редукторной техники ВАКОМА является применение качественных материалов для изготовления зубчатых зацеплений и&nbsp;специальная термическая и&nbsp;механическая обработка. Поставщиками заготовок для производства зубчатых передач ВАКОМА являются DEUTSCHE EDELSTAHLWERK, BGH Edelstahl Siegen GmbH (Германия) и&nbsp;SOCHOROVA VALCOVNA T.Z. (подразделение Moravia Steel, Чехия).
+			p Машиностроительные партнеры нашей компании имеют все необходимое оборудование для производства высококачественной приводной техники, включая оборудование цементации зубьев, зубошлифовки и&nbsp;динамической балансировки валов, а&nbsp;квалификация специалистов нашего инженерно-технологического центра позволяет выполнять проектирование понижающих редукторов и&nbsp;высокоскоростных мультипликаторов с&nbsp;передаваемой мощностью до&nbsp;30&nbsp;МВт при скоростях вращения до&nbsp;22&nbsp;000&nbsp;об/мин.
+			p Примечание (конструктивные особенности приводной техники ВАКОМА):
+			ul
+				li Материал изготовления зубчатых пар: усовершенствованные марки CrNiMo сплавов, имеющие повышенные характеристики;
+				li Зубчатые зацепления подвержены высокоточной обработке, закалены, цементовано-шлифованы и&nbsp;динамически отбалансированы; 
+				li Функционально важные места снабжены контрольно-измерительными приборами с&nbsp;цифровыми датчиками сигналов производства фирм Bently Nevada, JUMO серии&nbsp;Pt либо других производителей по&nbsp;согласованию с&nbsp;Заказчиком;
+				li Мультипликаторы комплектуются шестеренчатыми маслонасосами KRACHT;
+				li Применение подшипников от&nbsp;ведущих мировых производителей (SKF, FAG, Timken, MAIN METALL и&nbsp;др.).
+		.d-xl-none.text-center
+			.p-3.h3 Парк машин на производственной площадке
+			a.btn.btn-primary.mb-1(href="#") Скачать
+			.small файл pdf 2.3 mb
+	.container
+
+		.d-none.d-xl-block
+			table
+				tr
+					th(colspan='10' style="background-color:#16437c; color: #fff").text-center.p-3.h3 Парк машин на производственной площадке
+				tr(style="background-color:#1c5398; color: #fff").text-center
+					td(rowspan="2" )  Производитель
+					td(rowspan="2" )  Управление
+					td(rowspan="2" )  Исполнение
+					td(colspan="5" ) Рабочий диапазон
+					td(colspan="2" ) Размеры стола 
+				tr(style="background-color:#1c5398; color: #fff").text-center
+					td( ) X
+					td( ) Y
+					td( ) Z
+					td( ) Шпиндель
+					td( )  
+					td( ) L x B (мм)
+					td( ) Макс. вес 
+				tr.bg-info
+					td(colspan='10' style="  padding-left:10px " ) Сверлильно-расточной станок
+				tr.bg-light.text-center
+					td TOS Varnsdorf
+					td SINUMERIK 840D
+					td WRD 130 Q
+					td 7000 мм
+					td 3500 мм
+					td 1700 мм
+					td 34/46 кВт
+					td H SK 100
+					td 3000х3500
+					td 30000 кг
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Гоизонтальные токарные станки
+					td(colspan='3'  ).text-center Максимальный диаметр
+					td(colspan='2'  ).text-center Нагрузка
+					td(colspan='2'  ).text-center Расстояние между центрами
+				tr.bg-light.text-center
+					td FAT TUR klein
+					td Siemens 810D
+					td FAT TUR <br> 560х3000
+					td(colspan='3'  ) 560/300 мм
+					td 10-180 мм
+					td 800 кг
+					td 3000 мм
+					td  2500 кг; <br>  Люнета:   <br>  3000 кг
+				
+				tr.bg-light.text-center
+					td  FAT TUR grob
+					td Siemens 810D
+					td FAT TUR <br> 1150х6000
+					td(colspan='3'  ) 1150/700 мм
+					td 1x <br> 50-480&nbsp;мм; <br> 2x <br>380-700&nbsp;мм
+					td 2000 кг
+					td 6000 мм
+					td  9000 кг,  <br>  Люнета  <br>  12000 кг/   <br>  15000 кг
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Карусельный станок
+					td(colspan='3'  ).text-center Максимальный диаметр
+					td(colspan='2'  ).text-center Максимальная высота
+					td(colspan='1'  ).text-center Диаметр   <br> стола
+					td(colspan='1'  ).text-center Макс. <br>  вес
+				tr.bg-light.text-center
+					td Toshulin
+					td Siemens 840D
+					td SKIQ 25
+					td(colspan='3'  ) 2900 мм 
+					td(colspan='2'  ) 1940 мм
+					td 2500 мм
+					td 2500 кг
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Зубонарезная машина
+					td(colspan='3'  ).text-center Максимальный диаметр
+					td(colspan='1'  ).text-center Радиальное  <br>  межосевое <br>  расстояние
+					td(colspan='1'  ).text-center Заготовка
+					td(colspan='1'  ).text-center Модуль
+					td(colspan='1'  ).text-center Макс. <br> вес
+				tr.bg-light.text-center
+					td Hofler
+					td Siemens 840D
+					td HF 4000
+					td(colspan='3'  ) 4000 мм
+					td(colspan='1'  ) 105-2175 мм
+					td  Макс. диам. <br> 2500 мм
+					td 40+
+					td 45000 кг
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Зубонарезная машина
+					td(colspan='3'  ).text-center Максимальный диаметр
+					td(colspan='1'  ).text-center Радиальное  <br>  межосевое <br>  расстояние
+					td(colspan='1'  ).text-center Диаметр <br> люнеты
+					td(colspan='1'  ).text-center Диаметр <br> стола
+					td(colspan='1'  ).text-center Макс. <br> вес
+				tr.bg-light.text-center
+					td Hofler
+					td Siemens 840D
+					td HF 1600L
+					td(colspan='3'  ) 1600 мм
+					td(colspan='1'  ) 50-1000 мм
+					td  200-600 мм
+					td 1250 мм
+					td 14000 кг
+				tr.bg-light.text-center
+					td Hofler
+					td Siemens 840D
+					td HF 4000
+					td(colspan='3'  ) 4000 мм
+					td(colspan='1'  ) 530-2110 мм
+					td  
+					td 2350 мм
+					td 45000 кг
+					
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Зубонарезная машина
+					td(colspan='3'  ).text-center Диаметр концевика
+					td(colspan='1'  ).text-center Длина  <br> хода
+					td(colspan='1'  ).text-center Макс. <br> диаметр  <br> фрезы
+					td(colspan='1'  ).text-center Макс. <br> длина <br> фрезы
+					td(colspan='1'  ).text-center Модуль
+				tr.bg-light.text-center
+					td Hofler
+					td Siemens 840D
+					td HF 1600L
+					td(colspan='3'  ) С10 32, 40, 60, 80 мм
+					td(colspan='1'  ) 400 мм
+					td  385 мм
+					td 450 мм
+					td 30+
+				tr.bg-light.text-center
+					td Hofler
+					td Siemens 840D
+					td HF 4000
+					td(colspan='3'  ) С10 40, 60, 80, 100 мм
+					td(colspan='1'  ) 600 мм
+					td 500 мм
+					td  600 мм
+					td 48+
+				
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Зубошлифовальная машина
+					td(colspan='3'  ).text-center Макс. наружный диаметр
+					td(colspan='1'  ).text-center Наружный  <br> диаметр
+					td(colspan='1'  ).text-center Высота   <br> профиля
+					td(colspan='1'  ).text-center Макс.  <br> величина  <br> хода
+					td(colspan='1'  ).text-center Макс.  <br> вес
+				tr.bg-light.text-center
+					td Hofler
+					td Siemens 840D
+					td Rapid 2500
+					td(colspan='3'  ) 2600 мм
+					td(colspan='1'  ) мин. 100 мм
+					td макс. 100 мм
+					td 1500 мм
+					td 25000 кг
+				
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Круглошлифовальный станок
+					td(colspan='3'  ).text-center Макс. наружная шлифовка  <br> (диаметр)
+					td(colspan='1'  ).text-center Макс. <br> длина
+					td(colspan='1'  ).text-center Шлифовальн. <br> круги <br> (диаметр)
+					td(colspan='1'  ).text-center Ширина  <br> Шлифовальн.  <br> круг
+					td(colspan='1'  ).text-center Макс.  <br> вес  <br> Люнет
+				tr.bg-light.text-center
+					td TOS a. s.
+					td Siemens 840D
+					td BUC 85
+					td(colspan='3'  ) 850
+					td(colspan='1'  ) 4000 мм
+					td 750 мм
+					td 100 мм
+					td 4000 кг
+					
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Машина для высокоточного измерения инструмента
+					td(colspan='3'  ).text-center Максимальный длина  <br> инструмента
+					td(colspan='2'  ).text-center Максимальный диаметр <br> инструмента
+					td(colspan='2'  ).text-center Калибр скобы
+				tr.bg-light.text-center
+					td(colspan='1'  ) Zoller
+					td(colspan='2'  ) Venturion 800-pilot 3.0 CNC
+					td(colspan='3'  ) 1600 мм
+
+					td(colspan='2'  ) 50-1000 мм
+					td(colspan='2'  ) 1250 мм
+				tr.bg-info
+					td(colspan='3' style="  padding-left:10px " ) Испытательный стенд
+					td(colspan='3'  ).text-center Передаточное отношение <br> главного редуктора
+					td(colspan='1'  ).text-center Мощность
+					td(colspan='1'  ).text-center Частота <br> вращения
+					td(colspan='2'  ).text-center Частота вращения <br> на выходе
+				tr.bg-light.text-center
+					td(colspan='1'  ) 
+					td(colspan='2'  ) RPS 500 mit Spannfeld 8000х4000 mm
+					td(colspan='3'  ) 4,6 - 200
+
+					td(colspan='1'  ) 500 кВт
+					td(colspan='1'  ) 750 и 1500 <br> об./мин.
+					td(colspan='1'  ) 5-163 (на  <br> вых-ом валу)
+					td(colspan='1'  ) <12000 #[br] (на турбореж.)
+				
+				tr.bg-info
+					td(colspan='8' style="  padding-left:10px " ) Моечный комплекс
+					td(colspan='2'  ).text-center Размеры
+					
+				tr.bg-light
+					td(colspan='8' style="  padding-left:10px " ) Lutro
+					td(colspan='2'  ).text-center 7000х4000х4000 мм
+				
+				tr.bg-info
+					td(colspan='8' style="  padding-left:10px " ) Лкакрасочная кабина
+					td(colspan='2'  ).text-center Размеры
+					
+				tr.bg-light
+					td(colspan='8' style="  padding-left:10px " ) Lutro
+					td(colspan='2'  ).text-center 7000х4000х4000 мм
+				tr.bg-info
+					td(colspan='10' style="  padding-left:10px " ) Крановое оборудование
+				tr.bg-light
+					td(colspan='1'  ).text-center Brukenkran
+					td(colspan='1'  ).text-center Производственный цех
+					td(colspan='8'  ).text-center 1 х 40т/10т; 1 х 20т/5т 
+					
+				
+				tr.bg-light
+					td(colspan='1'  ).text-center Brukenkran
+					td(colspan='1'  ).text-center Сборочная площадка
+					td(colspan='8'  ).text-center 1 х 60т/10т; 1 х 20т/5т 
+				tr.bg-info
+					td(colspan="2" style="  padding-left:10px ") Габариты цехов
+					td(colspan="8" rowspan="4").p-0
+						img(src="img/@2x/img-table.jpg", alt="")
+				tr.bg-light
+					td(colspan="2" style="  padding-left:10px ")
+						|Монтажный цех: 79,8м х 17,9м = 1428,42м2
+						br
+						|Производственный цех: 79,8м х 26,9м = 2146,62м2
+						br
+						|Ворота производственного цеха (ШхВ): 6,00м х 5,00м 
+						br
+						|Ворота монтажного цеха (ШхВ): 6,00м х 5,00м 
+						br
+						|Высота крана: 8,02м
+				
+				tr.bg-info
+					td(colspan="2" style="  padding-left:10px ") Прочие услуги
+				tr.bg-light
+					td(colspan="2" style="  padding-left:10px ")
+						p 3D-измерения детали производятся с помощью  лазерного трекера FARO Vantage и Leica Absolute  Tracker.
+						p Все расчеты, разработка конструкторской  и технической документации и анализ проивзодства  ведет собственный конструкторский отдел приводов группы ВАКОМА РУС
+			table
+				tbody
+					tr(style="background-color:#1c5398; color: #fff").text-center
+						td(colspan="2").col-2 Тип
+						td(colspan="10") Основные технические характеристики / Фото
+						
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Зубофрезерные станки
+					tr.bg-light
+						td(colspan="2").col-2.text-center  GLC 900
+						td(colspan="5" rowspan="2").col-5 6-осевой  зубофрезерный станок, работающий червячной фрезой. Максимальный модуль 30 мм на максимальном диаметре 3000 мм, и модуль 20 мм при максимальном диаметре 500 мм
+						td(colspan="5" rowspan="15")
+					tr.bg-light
+						td(colspan="2").col-2.text-center  GLC 2600R 
+						
+					tr.bg-light
+						td(colspan="2").col-2.text-center  MODUL WF-1250/1500
+						td(colspan="5" rowspan="6").col-5
+							p Горизонтальные зубофрезерные 6-осевые станки  (конические передачи с прямыми
+							p тангенциальными и круговыми зубьями).
+
+							p Максимальный диаметр с поддержкой бабки: 2 000 мм;
+
+							p Максимальный диаметр без поддержки бабки: 1 500 мм;
+
+							p Максимальная ширина зубьев: 490 мм;
+
+							p Максимальный модуль: 22 мм;
+
+							p Двухместный цикл работы.
+						
+						
+					tr.bg-light
+						td(colspan="2").col-2.text-center  MODUL ZWFZ 1600
+					
+						
+					tr.bg-light
+						td(colspan="2").col-2.text-center  MODUL ZWFZ  800/3
+						
+						
+					tr.bg-light
+						td(colspan="2").col-2.text-center  MODUL ZWFZ  1250/14 II
+					
+						
+					tr.bg-light
+						td(colspan="2").col-2.text-center  CIMA CE 350
+					
+						
+					tr.bg-light
+						td(colspan="2").col-2.text-center  CIMA P5
+					
+					tr.bg-light
+						td(colspan="2" ).col-2.text-center  PFAUTER RS1
+						td(colspan="5" rowspan="6").col-5
+							p Зубофрезерный станок с вертикальными осями заготовок.  Для обработки заготовок по типу передач и валов, с самыми  различными профилями и формами на цилиндрических заготовках,  которые могут быть нарезаны.
+
+							p Диаметр заготовки номинальный - 400/500 мм;
+
+							p Максимальный модуль - 16 мм;
+
+							p Минимальный модуль - 0,5 мм;
+
+							p Число зубьев минимальное - 9;
+
+							p Максимальный угол наклона зуба - 10 / 30 / 45 / 60 *.
+
+					tr.bg-light
+						td(colspan="2"  rowspan="5").col-2.text-center  PFAUTER P400 FS/2 
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Зубодолбежные станки
+					tr.bg-light
+						td(colspan="2"  ).col-2.pt-3  LORENZ SNJ5
+						td(colspan="5").col-5.py-3
+							p Максимальный диаметр зубчатого колеса — 500 мм;
+
+							p Ширина колеса — 75 мм;
+
+							p Максимальный модуль — 6 мм;
+
+							p Минимальный модуль — 0,4 мм.
+
+						td(colspan="5" rowspan="2").col-5.py-3
+						
+					tr.bg-light
+						td(colspan="2"  ).col-2.pt-3  CLC
+						td(colspan="5").col-5.py-3 
+							p Обрабатываются изделия различных размеров:
+
+							p диаметром 100-2000 мм при модулях до 30 мм на станках с вертикальной осью;
+
+							p диаметром до 500 мм при длине до 3000 мм на станкахс горизонтальной осью.
+
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Фрезерный станок для спиральнозубых конических колес
+					tr.bg-light
+						td(colspan="2" ).col-2 KLINGELNBERG C60U
+						td(colspan="5"  ).col-5.pt-3 
+							p 6-осный станок с ЧПУ для высокоэффективного фрезерования  конических зубчатых колес.
+
+							p Диаметр заготовки (макс.)- 600 мм;
+
+							p Диапазон нормальных модулей 2,4- 13 мм (непрерывное деление) / (единичное деление)
+
+							p Ширина зуба (макс.), - 100 мм;
+
+							p Регулируемый угол делительного конуса 0° — 90°
+
+							p Минимальное /максимальное передаточное отношение 1:1 /1:10
+
+							p Минимальное /максимальное число зубьев 6 - 180;
+
+							p Нарезаемый угол спирали 0° — прим. 60
+						td(colspan="5").col-5.py-3
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Станок для конических шестерен с прямыми зубьями
+					tr.bg-light
+						td(colspan="2" ).col-2 GLEASON 12"
+						td(colspan="5"  ).col-5.pt-3 
+							p Максимальный модуль — 9,5 мм;
+
+							p Максимальный диаметр — 600 мм.
+						td(colspan="5").col-5.py-3
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Высокоточное фрезерование червячных шестерен
+					tr.bg-light
+						td(colspan="2" ).col-2 CLC500-H
+						td(colspan="5"  ).col-5.pt-3 
+							p Горизонтальная обкатывающая фрезерная машина для валов больших  размеров с числовым программным управлением.
+
+							p Агрегат горизонтальной металлообработки, связанной стяжелыми  нагрузками, рассчитан на фрезерование деталей диаметром 500 мм.
+
+							p Максимальный модуль 30 мм.
+						td(colspan="5").col-5.py-3
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Фрезерный станок для прямых и спиралевидных зубчатых реек
+					tr.bg-light
+						td(colspan="2" ).col-2 E.G.W. UZFL-V 300H
+						td(colspan="5" rowspan="2"  ).col-5.py-3 
+							p Максимальный модуль — до 20 мм; <br> Рабочий стол — 2120х275 мм;
+
+							p Число оборотов шпинделя 40-200 об./мин. <br> Диаметр фрезы — 280 мм; 
+							p Наклон фрезерной головки влево — 45° <br> Максимальная длина — 4000 мм.
+						td(colspan="5" rowspan="2").col-5.py-3
+					tr.bg-light
+						td(colspan="2" ).col-2 KESEL L93 - 2100 
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Фрезерный станки
+					tr.bg-light
+						td(colspan="2" ).col-2  FRITZ-HECKERT <br> ZFWG 250X3000
+						td(colspan="5" rowspan="3" ).col-5.py-3 
+							p Фрезерные станки для нарезания шнековой резьбы <br> Диаметр заготовки — до 250 мм;
+
+							p Длина винтовой резьбы — до 3125 мм;
+
+							p Диаметр отверстия шпинделя — до 102 мм;
+
+							p Высота центров — до 260 мм;
+
+							p Максимальный модуль — до 10 мм;
+
+							p Оборот фрезы — 45—560 об/мин.
+						td(colspan="5" rowspan="6").col-5.py-3
+						
+					tr.bg-light
+						td(colspan="2" ).col-2 FRITZ-HECKERT <br> ZFWG 250X2000
+					 
+						 
+					 
+					tr.bg-light
+						td(colspan="2" ).col-2 FRITZ-HECKERT <br> ZFWG 250X2000
+				 
+						 
+					 
+					tr.bg-light
+						td(colspan="2" ).col-2 WANDERER
+						td(colspan="5"  ).col-5.py-3 
+							p Фрезерный станок для нарезания шнековой резьбы.
+
+							p Максимальный диаметр заготовки — 400 мм;
+
+							p Максимальная длина зажима — 2000 мм;
+
+							p Максимальный модуль — 8 мм;
+
+							p Диаметр отверстия шпинделя - 120 мм
+					 
+					tr.bg-light
+						td(colspan="2" ).col-2 PFAUTER P315 H
+						td(colspan="5" ).col-5.py-3 Зубофрезерный станок <br> Максимальный модуль — 25 мм; <br> Максимальный длина — 2000 мм.
+						 
+					 
+
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Зубошлифовальные станки
+					tr.bg-light
+						td(colspan="2" ).col-2  OERLIKON MAAG <br> OPAL 800
+						td(colspan="5" rowspan="2" ).col-5.py-3 
+							p Шлифовальный станок для эвольвентного зубчатого колеса с ЧПУ  и устройством.автоматической проверки на качество.
+
+							p Максимальный диаметр зубчатого колеса — 1 400 мм;
+
+							p Ширина колеса — 1200 мм;
+
+							p Максимальный модуль — 18 мм;
+
+							p Минимальный модуль — 1 мм;
+
+							p Максимальный угол наклона зуба — 45 *
+						td(colspan="5" rowspan="6").col-5.py-3
+					tr.bg-light
+						td(colspan="2" ).col-2  OERLIKON MAAG <br> OPAL 1200 
+						
+					tr.bg-light
+						td(colspan="2" ).col-2  NILES ZP15
+						td(colspan="5" rowspan="3" ).col-5.py-3  
+							p Профильно-зубошлифовальные станки.
+
+							p Максимальный диаметр вершин зубьев — 2 000 мм;
+
+							p Максимальная глубина профиля — 75 мм;
+
+							p Максимальный модуль — 34 мм;
+
+							p Максимальный угол наклона зуба — +45*
+
+							p Максимальная длина хода при угле наклона зуба 0 * — 1 000 мм.
+
+							p Программно-управляемый механизм правки. Стационарное устройство  правки с горизонтальным расположением шпинделя для правки  и алмазным кругом. Движение правки создаётся одновременным  движением каретки шлифовальной бабки вертикально за счёт  перемещения оси подъёма и горизонтально за счёт перемещения  тангенциальной оси в режиме интерполяции (расчёт траектории правки осуществляется системой ЧПУ).
+					tr.bg-light
+						td(colspan="2" ).col-2 NILES ZP20
+					 
+					tr.bg-light
+						td(colspan="2" ).col-2  NILES ZE800 
+					tr.bg-light
+						td(colspan="2" ).col-2  KLINGELNBERG  <br> HNC 35
+						td(colspan="5"  ).col-5.py-3  Червячно-резьбошлифовальный станок с 6-осевым управлением Bosch.
+							br
+							| Червячный вал с модулем 1 — 30 мм;
+							br
+							| Максимальная длина — 1 400 мм.
+ 
+
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Шлицешлифовальный станок
+					tr.bg-light
+						td(colspan="2" ).col-2 FRITZ WERNER
+						td(colspan="10" ).col-5.py-3 Диаметр шлифования - 10-150 мм; длина устанавливаемой детали — 800 мм
+					 
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Круглошлифовальный станок
+					tr.bg-light
+						td(colspan="2" ).col-2  FORTUNA
+						td(colspan="5" ).col-5.py-3 Шлифовальный станок для внутренних поверхностей с максимальным диаметром — 200 мм.
+						td(colspan="5" rowspan="4").col-5.py-3
+						
+					tr.bg-light
+						td(colspan="2" ).col-2 LODI
+						td(colspan="5" ).col-5.py-3 Максимальный диаметр — 800 мм, максимальная высота — 500 мм
+					tr.bg-light
+						td(colspan="2" ).col-2 MORARA
+						td(colspan="5" ).col-5.py-3 Для внутренних и наружных поверхностей с максимальным диаметром 400 мм, максимальной высотой 200 мм.
+					tr.bg-light
+						td(colspan="2" ).col-2 SCHAUDT
+						td(colspan="5" ).col-5.py-3 Диаметр максимальный — 360 мм, длина шлифования — до 1 600 мм.
+
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Зубообрабатывающий станок
+					tr.bg-light
+						td(colspan="2" ).col-2 HEY
+						td(colspan="10" ).col-5.py-3 Округление зубчатых колес и снятие фаски. Максимальный модуль — 10 мм, максимальный диаметр — 600 мм
+						
+					tr.bg-light
+						td(colspan="2" ).col-2 M.P.M.
+						td(colspan="10" ).col-5.py-3 Очистка поверхности и снятие заусенцев.
+
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Шпоночно-долбежные станки
+					tr.bg-light
+						td(colspan="2" ).col-2 FROMAG <br> RAPIDA D63
+						td(colspan="10" ).col-5.py-3 Округление зубчатых колес и снятие фаски. Максимальный модуль — 10 мм, максимальный диаметр — 600 мм
+					tr.bg-light
+						td(colspan="2" ).col-2 FROMAG <br> RAPIDA D100
+						td(colspan="10" ).col-5.py-3 Очистка поверхности и снятие заусенцев.
+					tr.bg-light
+						td(colspan="2" ).col-2 M3
+						td(colspan="10" ).col-5.py-3 Заточной станок.
+					 
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Ленточно-отрезной станок
+					tr.bg-light
+						td(colspan="2" ).col-2 DAITO
+						td(colspan="5" ).col-5.pt-3
+							p Максимальный диаметр вала (резка под 90 градусов): 330,2 мм
+
+							p Минимальная скорость ленточной пилы: 1,7 м/мин
+
+							p Максимальная скорость ленточной пилы: 13,3 м/мин
+						td(colspan="5" )
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Токарные станки с ЧПУ типа CNC
+					tr.bg-light
+						td(colspan="2" ).col-2 PODAVANI <br> CNC 180
+						td(colspan="5" ).col-5  Максимальный диаметр — 180 мм, максимальная длина — 1 000 мм
+						td(colspan="5" rowspan="4" )
+						
+					tr.bg-light
+						td(colspan="2" ).col-2 PODAVANI <br> CNC 200
+						td(colspan="5" ).col-5 Максимальный диаметр — 400 мм, максимальная длина — 1 000 мм
+					 
+					tr.bg-light
+						td(colspan="2" ).col-2 PODAVANI <br> CNC 300
+						td(colspan="5" ).col-5 Максимальный диаметр — 600 мм, максимальная длина — 1 500 мм
+					 
+					tr.bg-light
+						td(colspan="2" ).col-2 PODAVANI <br> CNC 900
+						td(colspan="5" ).col-5 Максимальный диаметр — 1000 мм, максимальная длина — 2 500 мм
+					 
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Токарный центр
+					tr.bg-light
+						td(colspan="2" ).col-2 PONTIGIA
+						td(colspan="5" ).col-5 Максимальный диаметр — 1 200 мм, длина — 1 500 мм
+						td(colspan="5" rowspan="3" )
+						
+					tr.bg-light
+						td(colspan="2" ).col-2 GRAZIOLI DANIA 250
+						td(colspan="5" ).col-5 Максимальный диаметр — 500 мм
+					tr.bg-light
+						td(colspan="2" ).col-2 A.M.F.
+						td(colspan="5" ).col-5 Максимальный диаметр — 600 мм, длина — 2 000 мм
+
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Вертикальный обрабатывающий центр
+			 
+					tr.bg-light
+						td(colspan="2" ).col-2 FAMUP  <br> MCX 650
+						td(colspan="5" ).col-5.py-2
+							p Перемещение по координатам: Х — 650 мм, У — 450 мм, Z — 470 мм.
+
+							p Частота вращения шпинделя — 4 000 об/мин.
+
+							p Мощность шпинделя — 15 кВт.
+						td(colspan="5" rowspan="4").col-5.py-3
+				tbody
+					tr.bg-info()
+						td(colspan="12" style="  padding-left:10px ") Круглошлифовальный станок
+					tr.bg-light
+						td(colspan="2" ).col-2  CARL ZEISS
+						td(colspan="5" ).col-5.py-3 Трехмерный измерительный прибор для контроля зубчатых колес  с внутренними и внешними зубьями (червячные, конические зубчатые  передачи, либо прямо и spiroidal ). Максимальный диаметр — 600 мм
+						td(colspan="5" rowspan="4").col-5.py-3
+						
+					tr.bg-light
+						td(colspan="2" ).col-2.text-center
+						td(colspan="5" ).col-5.py-3 Приборы для проверки межосевых расстояний между центрами контактных зон.
+
+					tr.bg-light
+						td(colspan="2" ).col-2 MAAR
+						td(colspan="5" ).col-5.py-3 Портативный прибор для проверки шага и эвольвенты профиля передач
+					tr.bg-light
+						td(colspan="2" ).col-2  Equotip
+						td(colspan="5" ).col-5.py-3 Портативный твердомер.
+
+	//- +s-img
+	+footer()

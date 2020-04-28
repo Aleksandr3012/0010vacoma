@@ -1,12 +1,146 @@
 mixin s-img()
 	// start s-img
-	+b.s-img#s-img&attributes(attributes)
+	+b.s-img--sl#s-img&attributes(attributes)
 		.container
-			.row
-				.col-md-6
-					img.res-i(src="img/prod-1.png", alt="")
-				.col-md-6
-					img.res-i(src="img/prod-2.png", alt="")
-
-
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-3.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-3.jpg" alt="")
+		 
+mixin s-img-sl()
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-3.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-3.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-3.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-3.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
 	// end s-img
+
+//- Новость 2016-08-11 
+mixin s-img-news-2016-08-11()
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/news_item_20160811_01x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/news_item_20160811_01.jpg" alt="шестерня ведомая")
+				+e.slider-item
+					a(href='img/@2x/news_item_20160811_02x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/news_item_20160811_02.jpg" alt="шестерня ведущая")
+
+
+//- Главная страница 
+mixin s-img-main()
+	// start s-img
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/main_img_01x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/main_img_01.jpg" alt="")
+				+e.slider-item
+					a(href='img/@2x/main_img_02x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/main_img_02.jpg" alt="")
+
+//- Тяжелонагруженные редукторы
+mixin s-img-tnr()
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/tnr_img_01x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/tnr_img_01.jpg" alt="Тяжелонагруженные редукторы")
+				+e.slider-item
+					a(href='img/@2x/tnr_img_02x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/tnr_img_02.jpg" alt="Тяжелонагруженные редукторы")
+				+e.slider-item
+					a(href='img/@2x/tnr_img_03x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/tnr_img_03.jpg" alt="Тяжелонагруженные редукторы")
+//- Турборедукторы мультипликаторы
+mixin s-img-mlp()
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/mlp_img_01x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/mlp_img_01.jpg" alt="мультипликаторы")
+				+e.slider-item
+					a(href='img/@2x/mlp_img_02x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/mlp_img_02.jpg" alt="мультипликаторы")
+				//-+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+				//-+e.slider-item
+					a(href='img/@2x/prod-3.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-3.jpg" alt="")
+				//-+e.slider-item
+					a(href='img/@2x/prod-2.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/prod-2.jpg" alt="")
+
+//- Зубчатые передачи и комплектующие
+mixin s-img-zpk()
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/zpk_img_01x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_01.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_02x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_02.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_03x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_03.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_04x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_04.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_05x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_05.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_06x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_06.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_07x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_07.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_08x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_08.jpg" alt="Зубчатые передачи и комплектующие")
+				+e.slider-item
+					a(href='img/@2x/zpk_img_09x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/zpk_img_09.jpg" alt="Зубчатые передачи и комплектующие")
+
+//- Импортозамещение
+mixin s-img-imp()
+	+b.s-img--sl#s-img&attributes(attributes)
+		.container
+			+b.slider-js
+				+e.slider-item
+					a(href='img/@2x/imp_img_01x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/imp_img_01.jpg" alt="Импортозамещение")
+				+e.slider-item
+					a(href='img/@2x/imp_img_02x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/imp_img_02.jpg" alt="Импортозамещение")
+				+e.slider-item
+					a(href='img/@2x/imp_img_03x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/imp_img_03.jpg" alt="Импортозамещение")
+				+e.slider-item
+					a(href='img/@2x/imp_img_04x.jpg' data-fancybox="slider-item")
+						img(src="img/@2x/imp_img_04.jpg" alt="Импортозамещение")
+
+

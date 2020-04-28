@@ -78,21 +78,21 @@ mixin form-tabs()
 
 			.tabs__caption
 				.tabs__btn.active
-					+icon('tel')
+					+icon('telephone')
 					| Звонок 
-				.tabs__btn
-					+icon('viber')
-					| Viber
 				.tabs__btn
 					+icon('whatsapp')
 					| WhatsApp
+				.tabs__btn
+					+icon('viber')
+					| Viber
 		block
 		.tabs__wrap
 			.tabs__content.active
-				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
- 
+				+input("+7 (900) 444-44-44","tel",'Введите телефон:',"tel")(required)
 			.tabs__content
-				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
+				+input("+7 (900) 444-44-44","tel",'Введите whatsapp:',"whatsapp")
 			.tabs__content
-				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
+				+input("+7 (900) 444-44-44","tel",'Введите viber:',"viber")
+
 		//- .h5.text-secondar Перезвоню в течение рабочего дня

@@ -1,0 +1,6 @@
+User-agent: *
+
+Disallow: /admin/
+
+Disallow: /thanks.php/
+Host: vakoma.ru
