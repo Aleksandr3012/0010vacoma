@@ -6,6 +6,12 @@
 	}
 	&__slider-item a {
 		@include block(590, 510);
+		max-width: rem(590);
+		max-height: rem(510);
+		overflow: hidden;
+		&::before {
+			content: none;
+		}
 		@include media-breakpoint-up(md){
 			margin-right: rem(14);
 			margin-left: rem(14);
@@ -15,7 +21,9 @@
 		img {
 			width: 100%;
 			height: 100%;
-			@include a-cent;
+			// @include a-cent;
+			// position: static;
+			object-fit: cover;
 		}
 	}
 
