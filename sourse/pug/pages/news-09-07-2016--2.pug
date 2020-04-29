@@ -1,0 +1,124 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+	mixin bread()
+		.container
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") Главная  
+							meta(itemprop="position" )
+							
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") Новости
+							meta(itemprop="position" )
+
+					li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2016 год
+							meta(itemprop="position" )
+							
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList").pt-1
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2020 год 
+							meta(itemprop="position" )
+							
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2019 год  
+							meta(itemprop="position" )
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2018 год   
+							meta(itemprop="position" )
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name")    2017 год 
+							meta(itemprop="position" )
+
+					li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='#' itemprop="item" )
+							span( itemprop="name") 2016 год
+							meta(itemprop="position" )
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Поставка редуктора вспомогательного привода мельницы &Oslash;4,0&times;13,5&nbsp;м для ООО &laquo;Цемек Минералс&raquo;
+			p В&nbsp;рамках реализации проекта расширения линии производства цемента одного из&nbsp;заказчиков ООО &laquo;Цемек Минералс&raquo; по&nbsp;техническому заданию был разработан и&nbsp;изготовлен коническо-цилиндрический редуктор вспомогательного привода мельницы &Oslash;4,0&times;13,5&nbsp;м.
+	+s-img-news-09-07-2016--2
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Параметр
+					th  Значение
+	
+				tr.bg-light
+					td Входное число оборотов, об/мин
+					td.text-center 985
+	
+				tr.bg-light
+					td Передаточное отношение
+					td.text-center 160
+	
+				tr.bg-light
+					td Момент на тихоходном валу, Нм
+					td.text-center 80 319
+	
+				tr.bg-light
+					td Вес, кг
+					td(colspan="2").text-center 3 500
+	
+ 
+	
+	.pb-5
+		+bread()
+	+footer()
