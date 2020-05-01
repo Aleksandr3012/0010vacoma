@@ -270,3 +270,43 @@ mixin messengers()
 		img(src="img/viber.png", alt="")
 	a(href="https://wa.me/79255420608" target="_blank")
 		img.whatsapp(src="img/whatsapp.png", alt="")
+
+
+	mixin bread()
+		.container
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='index.html' itemprop="item" )
+							span( itemprop="name") Главная  
+							meta(itemprop="position" )
+							
+					li.breadcrumb-item( class="active" itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+						a(href='novosti-2016.html' itemprop="item" )
+							span( itemprop="name") Новости
+							meta(itemprop="position" )
+
+					//- li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					//- 	a(href='#' itemprop="item" )
+					//- 		span( itemprop="name") 2016 год
+					//- 		meta(itemprop="position" )
+							
+			nav(aria-label="breadcrumb" )
+				ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList").pt-1
+					//- li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					//- 	a(href='#' itemprop="item" )
+					//- 		span( itemprop="name") 2020 год 
+					//- 		meta(itemprop="position" )
+							
+					//- li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+					//- 	a(href='#' itemprop="item" )
+					//- 		span( itemprop="name") 2019 год  
+					//- 		meta(itemprop="position" )
+					mixin li(year)
+						li.breadcrumb-item( data-year= year itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+							a(href=`novosti-${year}.html` itemprop="item" )
+								span( itemprop="name")= `${year} год` 
+								meta(itemprop="position" )
+					+li('2018')
+					//- +li('2017')
+					+li('2016')

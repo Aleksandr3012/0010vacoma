@@ -45,7 +45,7 @@ html(lang="ru")
 		meta(name='theme-color', content='#3361d8')
 		+allcss()
 	block variables
-	body(class= mainPage)
+	body(class= mainPage data-body-year= mainYear)
 		+ie11()
 		.main-wrapper
 			block pagecontent

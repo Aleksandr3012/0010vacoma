@@ -230,6 +230,11 @@ function eventHandler() {
 	// 	infinite: false
 	// });
 
+	$('body').each(function(){
+		var th = $(this);
+		var thclass = th.data('body-year');
+		th.find('.breadcrumb-item[data-year="'+ thclass +'"]').addClass('active');
+	})
 
 
 	var gets = (function () {

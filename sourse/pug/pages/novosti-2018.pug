@@ -8,15 +8,15 @@ include ../blocks/s-news/_s-news.pug
 
 block variables
 	- let  mainPage= null
-	//- - let  mainYear= '2018'
+	- let  mainYear= '2018'
 
 block title
-	- let  title= 'Новость'
+	- let  title= 'Новости — ООО Вакома РУС'
 	title= title
 	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
 
 block keywords
-	meta(name="Keywords", content= "" )
+	meta(name="Keywords", content= "вакома новости, новости вакома рус, vakoma news, vakoma rus news, новости вакома 2016, новости вакома 2019, новости вакома 2017, новости вакома 2018, новости вакома 2020, новости вакома 2021" )
 block pagecontent 
 	mixin menu()
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
@@ -48,13 +48,8 @@ block pagecontent
 
 	+bread()
 	
-	+text()(class="text-block--inner")
-		.container
-			p.strong Пуско-наладочные работы редуктора вспомогательного привода и&nbsp;редуктора главного привода мельницы &Oslash;4,0&times;13,5&nbsp;м, изготовленных для ООО &laquo;Цемек Минералс&raquo;
-			p По&nbsp;окончании монтажных работ на&nbsp;площадке клиента ООО &laquo;Цемек Минералс&raquo; состоялись пуско-наладочные работы редуктора вспомогательного привода и&nbsp;редуктора главного привода мельницы &Oslash;4,0&times;13,5&nbsp;м. Приводное оборудование смонтировано с&nbsp;мельницей без замечаний. После окончания пуско-наладочных работ привод мельницы выведен на&nbsp;номинальный режим работы.
-	+s-img-news-15-06-2018
-
-	
+	+s-news-2018
 	.pb-5
 		+bread()
+	//- +s-img
 	+footer()
