@@ -552,6 +552,12 @@ table {
 	table {
 		min-width: 650px;
 	}
+
+	&--sm {
+		table {
+			min-width: 100%;
+		}
+	}
 }
 
 .slick-active {

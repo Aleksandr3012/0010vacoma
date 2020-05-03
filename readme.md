@@ -10,4 +10,4 @@
 1. <https://Aleksandr3012.github.io/0010vacoma/public/novosti-2016.html>
 1. <https://Aleksandr3012.github.io/0010vacoma/public/news-2016-08-11.html>
 1. <https://Aleksandr3012.github.io/0010vacoma/public/news-09-07-2016.html>
-1. <https://Aleksandr3012.github.io/0010vacoma/public/news-2016-08-11.html>
+1. <https://Aleksandr3012.github.io/0010vacoma/public/news-09-07-2016--2.html>
