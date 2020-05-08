@@ -2,13 +2,12 @@
 const semver = require('semver');
 const _ = require('lodash');
 const cint = require('cint');
-const chalk = require('chalk');
 const semverutils = require('semver-utils');
 const ProgressBar = require('progress');
 const versionUtil = require('./version-util.js');
 const packageManagers = require('./package-managers');
 const prompts = require('prompts');
-const pMap = require('p-map');
+
 // keep order for setPrecision
 const DEFAULT_WILDCARD = '^';
 
@@ -256,8 +255,7 @@ function upgradePackageDefinitions(currentDependencies, options) {
         json: options.json,
         loglevel: options.loglevel,
         enginesNode: options.enginesNode,
-        timeout: options.timeout,
-        concurrency: options.concurrency
+        timeout: options.timeout
     }).then(latestVersions => {
 
         const upgradedDependencies = upgradeDependencies(currentDependencies, latestVersions, {
@@ -434,16 +432,9 @@ function queryVersions(packageMap, options = {}) {
                 pre: options.pre != null ? options.pre : versionUtil.isPre(packageMap[dep])
             }
         )).catch(err => {
-            const errorMessage = err ? (err.message || err).toString() : '';
-            if (errorMessage.match(/E404|ENOTFOUND|404 Not Found/i)) {
+            if (err && (err.message || err).toString().match(/E404|ENOTFOUND|404 Not Found/i)) {
                 return null;
             } else {
-
-                // print a hint about the --timeout option for network timeout errors
-                if (/(Response|network) timeout/i.test(errorMessage)) {
-                    console.error('\n\n' + chalk.red('FetchError: Request Timeout. npm-registry-fetch defaults to 30000 (30 seconds). Try setting the --timeout option (in milliseconds) to override this.') + '\n');
-                }
-
                 throw err;
             }
         }).then(result => {
@@ -464,7 +455,8 @@ function queryVersions(packageMap, options = {}) {
             return cint.keyValue(packageList[i], version);
         });
     }
-    return pMap(packageList,getPackageVersionProtected, {concurrency: options.concurrency})
+
+    return Promise.all(packageList.map(getPackageVersionProtected))
         .then(zipVersions)
         .then(_.partialRight(_.pickBy, _.identity));
 }
@@ -569,6 +561,5 @@ module.exports = {
     isUpgradeable,
     queryVersions,
     upgradeDependencies,
-    upgradeDependencyDeclaration,
-    getPackageManager
+    upgradeDependencyDeclaration
 };

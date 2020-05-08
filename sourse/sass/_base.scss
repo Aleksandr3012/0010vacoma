@@ -577,3 +577,16 @@ table {
 	right: 0;
 	z-index: 2;
 }
+
+.mw-1200{
+	min-width: 1200px;
+	
+	margin-top: rem(0);
+	margin-bottom: rem(0);
+}
+
+.tableWrap {
+	overflow-x: auto;
+	padding-top: rem(60);
+	margin-bottom: rem(60);
+}
