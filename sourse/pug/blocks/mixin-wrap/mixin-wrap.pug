@@ -59,20 +59,20 @@ mixin pugin()
 						block
 			+li()
 				span.prev.page-numbers( )
-					img(src="img/svg/prev.svg", alt="")
+					img(src="img/svg/prev.svg", alt="Вакома РУС")
 			+li()
 				span.prev.page-numbers( )
-					img(src="img/svg/prev-double.svg", alt="")
+					img(src="img/svg/prev-double.svg", alt="Вакома РУС")
 			+li()
 				span.page-numbers.current  1
 			- for (var x = 1; x < 5; x++)
 				+li(x)
 			+li()
 				a.next.page-numbers(href='#')
-					img(src="img/svg/next.svg", alt="")
+					img(src="img/svg/next.svg", alt="Вакома РУС")
 			+li()
 				a.next.page-numbers(href='#')
-					img(src="img/svg/next-double.svg", alt="")
+					img(src="img/svg/next-double.svg", alt="Вакома РУС")
 //- +pugin()
 //- /pugination
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
@@ -163,7 +163,7 @@ mixin pic(i, bg, lazy="lazy", media='576px')
 		if source
 			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
 		else
-			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="Вакома РУС")&attributes(attributes)
 	
 	// picture
 	picture( class= lazy)&attributes(attributes) 
@@ -193,7 +193,7 @@ mixin pic2({i, bg, lazy="lazy", media='576px'})
 		if source
 			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
 		else
-			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="Вакома РУС")&attributes(attributes)
 	
 	// picture
 	picture( class= lazy)&attributes(attributes) 
@@ -265,11 +265,11 @@ mixin text()
 
 mixin messengers()
 	a(href="https://t.me/wol1414" target="_blank")
-		img(src="img/telegram.png", alt="")
+		img(src="img/telegram.png", alt="Вакома РУС")
 	a(href="viber://chat?number=79068988888" target="_blank")
-		img(src="img/viber.png", alt="")
+		img(src="img/viber.png", alt="Вакома РУС")
 	a(href="https://wa.me/79255420608" target="_blank")
-		img.whatsapp(src="img/whatsapp.png", alt="")
+		img.whatsapp(src="img/whatsapp.png", alt="Вакома РУС")
 
 
 	mixin bread()
@@ -307,6 +307,8 @@ mixin messengers()
 							a(href=`novosti-${year}.html` itemprop="item" )
 								span( itemprop="name")= `${year} год` 
 								meta(itemprop="position" )
+					+li('2020')
+					+li('2019')
 					+li('2018')
-					//- +li('2017')
+					+li('2017')
 					+li('2016')

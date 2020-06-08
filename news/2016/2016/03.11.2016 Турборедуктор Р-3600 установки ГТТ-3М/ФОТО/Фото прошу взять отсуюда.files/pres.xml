@@ -1,0 +1,47 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <p:presentation sizeof="screen" notessizex="4282" notessizey="6254"
+  gridspacingx="46448" gridspacingy="46448" subsetembed="1">
+  <p:master id="646" slidesn="1D255D4,AF678330" type="main" href="master646.htm"
+   xmlhref="master646.xml" template="Бумажная" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="1036" slidesn="1D255D4,AF678330" type="main"
+   href="master1036.htm" xmlhref="master1036.xml" template="1_Бумажная"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="1037" slidesn="1D255D4,AF678330" type="main"
+   href="master1037.htm" xmlhref="master1037.xml" template="2_Бумажная"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="1038" slidesn="1D255D4,AF678330" type="main"
+   href="master1038.htm" xmlhref="master1038.xml" template="3_Бумажная"
+   layout="title_body" slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="1" slidesn="1D218AE,CD5B1400" type="notes" href="master01.htm"
+   layout="notes" slots="header,dateTime,slideImage,body,footer,slideNumber"/>
+  <p:slide id="116" slidesn="0,0" href="slide0116.htm"/>
+  <p:viewstate type="slideView" outlinescale="170" notestextscale="1"
+   restoredleft="275" restoredtop="939" manualadjustleft="t" manualadjusttop="t"
+   hideoutlineicons="t"/>
+  <p:slideshowsettings pencolor="rgb(255,0,0)"/>
+  <p:kinsoku language="Japanese" level="levelOne"/>
+  <p:headersfooters nouserdate="t" nofooter="t" noheader="t" nodate="t"
+   todaydate="t"/>
+  <p:headersfooters notes="t" nouserdate="t" nofooter="t" noheader="t"
+   nodate="t" todaydate="t"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack" hideslideanimation="t"
+   browsersupport="v4"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="7174"/>
+</xml>

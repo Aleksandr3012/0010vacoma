@@ -1,0 +1,332 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 12">
+<link id=Main-File rel=Main-File href="../Фото%20прошу%20взять%20отсуюда.htm">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Презентация PowerPoint</title>
+<meta name=Description content="6/4/2020">
+<link rel=Stylesheet href="master646_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:103% !important;}
+-->
+</style>
+<script><!--
+function LoadSld()
+{
+	var sld=GetObj("SlideObj")
+	if( !g_supportsPPTHTML ) {
+		sld.style.visibility="visible"
+		return
+	}
+	if( MakeNotesVis() ) return
+	runAnimations = _InitAnimations();
+	if( IsWin("PPTSld") )
+		parent.SldUpdated(GetSldId())
+	g_origSz=parseInt(SlideObj.style.fontSize)
+	g_origH=sld.style.posHeight
+	g_origW=sld.style.posWidth
+	g_scaleHyperlinks=(document.all.tags("AREA").length>0)
+	if( g_scaleHyperlinks )
+		InitHLinkArray()
+	if( g_scaleInFrame||(IsWin("PPTSld") && parent.IsFullScrMode() ) )
+		document.body.scroll="no"
+	_RSW()
+	if( IsWin("PPTSld") && parent.IsFullScrMode() )
+		FullScrInit();
+	
+	MakeSldVis();
+	
+	if( runAnimations )
+	{
+		if( document.all("NSPlay") )
+			document.all("NSPlay").autoStart = false;
+		if( sld.filters && sld.filters.revealtrans )
+			setTimeout( "document.body.start()", sld.filters.revealtrans.duration * 1000 );
+		else
+			document.body.start();
+	}
+}
+function MakeSldVis()
+{
+	var fTrans=g_showAnimation && SldHasTrans()
+	if( fTrans )
+	{
+		if( g_bgSound ) {
+			idx=g_bgSound.indexOf(",");
+			pptSound.src=g_bgSound.substr( 0, idx );
+			pptSound.loop= -(parseInt(g_bgSound.substr(idx+1)));
+		}
+		SlideObj.filters.revealtrans.Apply()
+    }
+	SlideObj.style.visibility="visible"
+	if( fTrans )
+		SlideObj.filters.revealtrans.Play()
+}
+function MakeNotesVis()
+{
+	if( !IsNts() ) return false
+	SlideObj.style.display="none"
+	nObj = document.all.item("NotesObj")
+	parent.SetHasNts(0)
+	if( nObj ) {
+		nObj.style.display=""
+		parent.SetHasNts(1)
+	}
+	return 1
+}
+function ChkAutoAdv()
+{
+	if(SldHasTrans())
+		SlideObj.onfilterchange=AutoAdv
+	else
+		AutoAdv()
+}
+function AutoAdv()
+{
+	if(!IsWin("PPTSld") || !gUseSldTimings )return
+	var sld=GetCurSld()
+	if( (sld.mAdvDelay>0) && !parent.IsFramesMode() )
+		setTimeout("parent.GoToNextSld()",sld.mAdvDelay)
+}
+function GetObj(id)
+{
+	if(g_supportsPPTHTML) return document.all(id);
+	else return document.getElementById(id);
+}
+function SldHasTrans() { return SlideObj.style.filter != ""; }
+function GetSldId() { return sId=location.href.substring(location.href.lastIndexOf('/')+1) }
+function HideMenu() { if( frames["PPTSld"] && PPTSld.document.all.item("ctxtmenu") && PPTSld.ctxtmenu.style.display!="none" ) { PPTSld.ctxtmenu.style.display='none'; return true } return false }
+function IsWin( name ) { return window.name == name }
+function IsNts() { return IsWin("PPTNts") }
+function IsSldOrNts() { return( IsWin("PPTSld")||IsWin("PPTNts") ) }
+function SupportsPPTAnimation() { return( navigator.platform == "Win32" && navigator.appVersion.indexOf("Windows")>0 ) }
+function SupportsPPTHTML()
+{
+	var appVer=navigator.appVersion, msie=appVer.indexOf("MSIE "), ver=0
+	if( msie >= 0 )
+		ver=parseFloat( appVer.substring( msie+5, appVer.indexOf(";",msie) ) )
+	else
+		ver=parseInt(appVer)
+	return( ver >= 4 && msie >= 0 )
+}
+function _RSW()
+{
+	if( !g_supportsPPTHTML || IsNts() ||
+	  ( !g_scaleInFrame && (!IsWin("PPTSld") || !parent.IsFullScrMode()) ) )
+		return
+        var padding=0;
+        if( IsWin("PPTSld") && parent.IsFramesMode() ) padding=6
+	cltWidth=document.body.clientWidth-padding
+	cltHeight=document.body.clientHeight-padding
+	factor=(1.0*cltWidth)/g_origW
+	if( cltHeight < g_origH*factor )
+		factor=(1.0*cltHeight)/g_origH
+	newSize = g_origSz * factor
+	if( newSize < 1 ) newSize=1
+	s=SlideObj.style
+	s.fontSize=newSize+"px"
+	s.posWidth=g_origW*factor
+	s.posHeight=g_origH*factor
+	s.posLeft=(cltWidth-s.posWidth+padding)/2
+	s.posTop=(cltHeight-s.posHeight+padding)/2
+	if( g_scaleHyperlinks )
+		ScaleHyperlinks( factor )
+}
+function _InitAnimations()
+{
+	animRuntimeInstalled = ''+document.body.localTime != 'undefined';
+	isFullScreen = (window.name == "PPTSld") && !parent.IsFramesMode();
+	g_animUseRuntime = g_showAnimation && animRuntimeInstalled && !(isFullScreen && parent.IsSldVisited());
+	if( g_animUseRuntime ) {
+		collSeq = document.all.tags("seq");
+		if( collSeq != null ) {
+			for(ii=0;ii<collSeq.length;ii++) {
+				if( collSeq[ii].getAttribute( "p:nodeType" ) == "mainSeq" ) {
+					g_animMainSequence = collSeq[ii];
+					break;
+				}
+			}
+		}
+		if( g_animItemsToHide && document.body.playAnimations != false ) {
+			for(jj = 0; jj < g_animItemsToHide.length; jj++) {
+				if( hideObj = GetObj(g_animItemsToHide[jj]) )
+					hideObj.runtimeStyle.visibility="hidden";
+			}
+		}
+		if( g_animInteractiveItems ){
+			for(jj = 0; jj < g_animInteractiveItems.length; jj++) {
+				if( triggerObj = GetObj(g_animInteractiveItems[jj]) )
+					triggerObj.runtimeStyle.cursor="hand";
+			}
+		}
+		if( gUseSldTimings && ''+g_animSlideTime != 'undefined' ) {
+			adjustedTime = document.body.calculateAutoAdvanceTimes( g_animSlideTime, g_animEffectTimings );
+			if( IsWin("PPTSld") && adjustedTime != g_animSlideTime ) {
+			   var sld = GetCurSld();
+			   sld.mAdvDelay = adjustedTime * 1000;
+			}
+		}
+	}
+	return g_animUseRuntime;
+}
+
+var g_supportsPPTHTML = SupportsPPTHTML(), g_scaleInFrame = 1, gId="", g_bgSound="",
+    g_scaleHyperlinks = false, g_allowAdvOnClick = 1, g_showInBrowser = 0, gLoopCont = 0, gUseSldTimings = 1;
+var g_showAnimation = g_supportsPPTHTML && SupportsPPTAnimation() && g_showInBrowser;
+var g_animManager = null;
+var g_animUseRuntime = false;
+var g_animItemsToHide, g_animInteractiveItems, g_animSlideTime;
+var g_animMainSequence = null;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><p:slidetransition advancetime="0" speed="1"
+ flag="1"/><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="5"/>
+</o:shapelayout>
+</head>
+
+<body lang=RU style='margin:0px;background-color:black' onresize="_RSW()"
+onload="LoadSld()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:554px;height:415px;font-size:16px;background-color:#E6ECF3;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#000000,#ffffff,#444d26,#fefac9,#a5b592,#f3a447,#8e58b6,#7f6f6f"
+ masterhref="master646.xml">
+ <p:shaperange href="master646.xml#_x0000_s1025"/><v:shape id="_x0000_s5122"
+  style='position:absolute;left:691.875pt;top:0;width:27.75pt;height:539.625pt;
+  visibility:visible;mso-wrap-style:none;v-text-anchor:middle' coordsize="352425,6853238"
+  path="m,l978,r,19036l,19036,,xe" fillcolor="#0e4d7e" stroked="f">
+  <v:path o:connecttype="custom" o:connectlocs="352425,3426619;176213,6853238;0,3426619;176213,0"
+   o:connectangles="0,0,0,0" textboxrect="0,0,352425,6853238"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5122"
+ src="slide0116_image001.gif" style='position:absolute;top:0%;left:96.02%;
+ width:.36%;height:.72%'><![endif]><v:shape id="_x0000_s5123" style='position:absolute;
+  left:0;top:0;width:27.75pt;height:539.625pt;visibility:visible;
+  mso-wrap-style:none;v-text-anchor:middle' coordsize="352425,6853238" path="m,l978,r,19036l,19036,,xe"
+  fillcolor="#0e4d7e" stroked="f">
+  <v:path o:connecttype="custom" o:connectlocs="352425,3426619;176213,6853238;0,3426619;176213,0"
+   o:connectangles="0,0,0,0" textboxrect="0,0,352425,6853238"/>
+ </v:shape><v:shape id="_x0000_s5124" style='position:absolute;left:75.625pt;
+  top:168pt;width:567.75pt;height:318.875pt;visibility:visible;
+  mso-wrap-style:none;v-text-anchor:middle' coordsize="7210425,4049713" path="m,l20028,r,11248l,11248,,xe"
+  filled="f" stroked="f">
+  <v:path o:connecttype="custom" o:connectlocs="7210425,2024869;3605213,4049713;0,2024869;3605213,0"
+   o:connectangles="0,0,0,0" textboxrect="0,0,7210425,4049713"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5123"
+ src="slide0116_image002.gif" style='position:absolute;top:0%;left:0%;
+ width:.36%;height:.72%'><![endif]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+  o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+  stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="Picture_x0020_6" o:spid="_x0000_s5125" type="#_x0000_t75"
+  style='position:absolute;left:48.125pt;top:94.25pt;width:139.75pt;height:130.375pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image003.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="Picture_x0020_6"
+ src="slide0116_image003.jpg" style='position:absolute;top:17.34%;left:6.67%;
+ width:19.49%;height:24.09%'><![endif]><v:shape id="Picture_x0020_7" o:spid="_x0000_s5126"
+  type="#_x0000_t75" style='position:absolute;left:189.875pt;top:94.25pt;
+  width:145.625pt;height:130.375pt;visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image004.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="Picture_x0020_7"
+ src="slide0116_image004.jpg" style='position:absolute;top:17.34%;left:26.35%;
+ width:20.21%;height:24.09%'><![endif]><v:shape id="_x0000_s5127" type="#_x0000_t75"
+  style='position:absolute;left:337.25pt;top:94.25pt;width:173.875pt;height:130.375pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image005.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5127"
+ src="slide0116_image005.jpg" style='position:absolute;top:17.34%;left:46.75%;
+ width:24.18%;height:24.09%'><![endif]><v:shape id="Picture_x0020_8" o:spid="_x0000_s5128"
+  type="#_x0000_t75" style='position:absolute;left:513pt;top:111.25pt;width:174pt;
+  height:130.375pt;visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image006.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="Picture_x0020_8"
+ src="slide0116_image006.jpg" style='position:absolute;top:20.48%;left:71.29%;
+ width:24.18%;height:24.09%'><![endif]><v:shape id="_x0000_s5129" type="#_x0000_t75"
+  style='position:absolute;left:42.375pt;top:287pt;width:142.625pt;height:107pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image007.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5129"
+ src="slide0116_image007.jpg" style='position:absolute;top:53.25%;left:5.95%;
+ width:19.85%;height:19.75%'><![endif]><v:shape id="_x0000_s5130" type="#_x0000_t75"
+  style='position:absolute;left:201.25pt;top:287pt;width:143.75pt;height:107.875pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image008.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5130"
+ src="slide0116_image008.jpg" style='position:absolute;top:53.25%;left:27.97%;
+ width:20.03%;height:20.0%'><![endif]><v:shape id="_x0000_s5131" type="#_x0000_t75"
+  style='position:absolute;left:354.375pt;top:287pt;width:143.625pt;height:107.75pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image009.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5131"
+ src="slide0116_image009.jpg" style='position:absolute;top:53.25%;left:49.27%;
+ width:20.03%;height:20.0%'><![endif]><v:shape id="_x0000_s5132" type="#_x0000_t75"
+  style='position:absolute;left:513.125pt;top:287pt;width:143.625pt;height:107.75pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image010.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5132"
+ src="slide0116_image010.jpg" style='position:absolute;top:53.25%;left:71.29%;
+ width:20.03%;height:20.0%'><![endif]><v:shape id="_x0000_s5133" type="#_x0000_t75"
+  style='position:absolute;left:195.625pt;top:406.125pt;width:160pt;height:95pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image011.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5133"
+ src="slide0116_image011.jpg" style='position:absolute;top:75.18%;left:27.25%;
+ width:22.2%;height:17.59%'><![endif]><v:shape id="_x0000_s5134" type="#_x0000_t75"
+  style='position:absolute;left:467.75pt;top:406.125pt;width:147.375pt;
+  height:104.125pt;visibility:visible;mso-wrap-style:square'>
+  <v:stroke joinstyle="round"/>
+  <v:imagedata src="slide0116_image012.jpg" o:title=""/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s5134"
+ src="slide0116_image012.jpg" style='position:absolute;top:75.18%;left:64.98%;
+ width:20.39%;height:19.27%'><![endif]></p:slide></div>
+
+</body>
+
+</html>
