@@ -210,7 +210,7 @@ mixin s-img-news-body()
 			+b.slider-js
 				block
 				
-mixin  slidImg(path1, path2, alt)
+mixin  slidImg(path1, path2= path1, alt)
 	+e.slider-item
 		a(href= path2 data-fancybox="slider-item")
 			img(src= path1 alt= alt)

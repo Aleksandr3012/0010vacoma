@@ -1,0 +1,107 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block description 
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			h1.strong Изготовление корпуса турборедуктора М-430 привода центробежного компрессора 16ГЦ-300/6-126 для ПАО &laquo;СИБУР Холдинг&raquo;
+			p По&nbsp;аварийной заявке ПАО &laquo;СИБУР Холдинг&raquo; наша компания выполнила работы по&nbsp;изготовлению корпуса турборедуктора М-430 привода центробежного компрессора 16ГЦ-300/6-126. Взамен существующего корпуса литого исполнения инженерами ООО &laquo;ВАКОМА РУС&raquo; был разработан корпус крутильно-жесткий, недеформируемый, сварной конструкции с&nbsp;выносной системой распределения масла фирмы PARKER. Были произведены все необходимые расчёты, выполнена проверка прочности и&nbsp;жёсткости корпусных узлов методом конечных элементов. 
+			p Корпус цилиндрического турборедуктора был изготовлен с&nbsp;учетом монтажа и&nbsp;установки на&nbsp;существующие фундаменты редуктора М430, с&nbsp;учетом применения штатных подшипников и&nbsp;использования штатной зубчатой передачи.
+			p Разработка конструкторской документации, изготовление, поставка на&nbsp;производственную площадку Заказчика и&nbsp;проведение шеф-монтажных работ специалистами нашей компании осуществлялась в&nbsp;течение 90&nbsp;календарных дней.
+	//- +s-img-news-2016-08-11
+	//- +s-img-news-body()
+	//- 	+slidImg('img/@2x/news_item_20160811_01.jpg', 'img/@2x/news_item_20160811_01x.jpg', 'шестерня ведомая')
+	//- 	+slidImg('img/@2x/news_item_20160811_01.jpg', 'https://www.youtube.com/embed/T5EujiWSWCA', 'шестерня ведомая')
+	//- 	+slidImg('img/@2x/news_item_20160811_02.jpg', 'img/@2x/news_item_20160811_02x.jpg', 'шестерня ведущая')
+	//- .container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Параметр
+					th Вал-шестерня
+					th  Колесо зубчатое с валом
+	
+				tr.bg-light
+					td  Мощность эл. двигателя, кВт
+					td(colspan="2").text-center  18 000
+	
+				tr.bg-light
+					td  Частота вращения на входном валу, <br>  об./мин
+					td(colspan="2").text-center 10 998
+	
+				tr.bg-light
+					td  Число зубьев
+					td.text-center 40
+					td.text-center 83
+	
+				tr.bg-light
+					td  Передаточное отношение
+					td(colspan="2").text-center 1 : 2,075
+	
+				tr.bg-light
+					td  Межосевое расстояние, мм
+					td(colspan="2").text-center 430
+	
+				tr.bg-light
+					td  Угол наклона зубьев, °
+					td(colspan="2").text-center 30,9
+	
+				tr.bg-light
+					td  Модуль, мм
+					td(colspan="2").text-center 6
+	
+				tr.bg-light
+					td  Масса, кг
+					td.text-center 315
+					td.text-center 932
+ 
+	
+	.pb-5
+		+bread()
+	+footer()
