@@ -312,3 +312,17 @@ mixin messengers()
 					+li('2018')
 					+li('2017')
 					+li('2016')
+
+
+
+
+
+mixin itemNews(i,d,p,a)
+	+e.row.row
+		.col-md-5
+			+e.img-wrap(href= a).bg-wrap
+				img.img-bg.object-fit-js(src= i , alt="Вакома РУС")
+		.col-xl-6.col
+			+e.date= d
+			.h4.fw-400= p
+			+e.link(href= a) ПОДРОБНЕЕ
