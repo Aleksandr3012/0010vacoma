@@ -1,0 +1,94 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block description 
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			h1.strong  4&nbsp;комплекта зубчатых пар турборедуктора Р-530 для нагнетателя Э-200-31-1 для ПАО &laquo;СИБУР Холдинг&raquo;
+			p Для пополнения фонда аварийно-технического запаса ООО &laquo;ВАКОМА РУС&raquo; выполнило работы по&nbsp;разработке конструкторской документации, изготовлению и&nbsp;поставке 4-х комплектов зубчатых пар турборедуктора Р-530 для нагнетателей Э-200-31-1.
+			p Изготовление изделий было выполнено на&nbsp;основании разработанной техническими специалистами ООО &laquo;ВАКОМА РУС&raquo; конструкторской документации с&nbsp;использованием NiCrMo сплавов, с&nbsp;проведением технологических операций по&nbsp;термообработке поверхности зубьев&nbsp;&mdash; цементация (твердость 60&nbsp;HRC, h = 1,4&nbsp;мм), зубошлифовке и&nbsp;динамической балансировке.
+	//- +s-img-news-2016-08-11
+	+s-img-news-body()
+		+slidImg('img/@2x/2017-12-20-news-01.jpg', 'img/@2x/2017-12-20-news-xl-01.jpg', '')
+		+slidImg('img/@2x/2017-12-20-news-02.jpg', 'img/@2x/2017-12-20-news-xl-02.jpg', '')
+		+slidImg('img/@2x/2017-12-20-news-03.jpg', 'img/@2x/2017-12-20-news-xl-03.jpg', '')
+		+slidImg('img/@2x/2017-12-20-news-04.jpg', 'img/@2x/2017-12-20-news-xl-04.jpg', '')
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th Параметр
+					th Аэратор Ø 3 700
+				mixin tr(t1, t2)
+					tr.bg-light
+						td= t1
+						td( ).text-center= t2
+				+tr("Назначение",'Смешивание сточных вод')
+				+tr("Частота вращения вала аэратора, об./мин",'34')
+				+tr("Мощность электродвигателя аэратора, кВт",'200')
+				+tr("Смазка редуктора ",'Жидкая, циркуляционная')
+				+tr("Количество импеллеров (Ø 3 700, 2 Ø 780)",'2')
+				+tr("Характеристика станции жидкой смазки:",'37')
+				+tr("-производительность, л/мин",'0,5 (5,0)')
+				+tr("          -давление, Мпа (кг/см2)",'1,5')
+				+tr("          -мощность эл. Двигателя, кВт",'')
+				tr.bg-light
+					td(colspan="2") Габаритные размеры, мм:
+				
+				+tr("          - длина",'3 700')
+				+tr("          - ширина",'3 700')
+				+tr("          - высота",'9 020')
+				+tr("Масса, кг",'14 450')
+				tr.bg-light
+					td(colspan="2") В&nbsp;состав поставки входили редукторы, импеллеры, рамы, система автоматизации с&nbsp;датчиками различного типа, система электроснабжения.
+ 
+	
+	.pb-5
+		+bread()
+	+footer()
