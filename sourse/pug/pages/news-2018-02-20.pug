@@ -1,0 +1,92 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block description 
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			h1.strong  8&nbsp;редукторов для аппаратов воздушного охлаждения (АВО) по&nbsp;программе импортозамещения (NIPPON GEAR, Япония) для ПАО &laquo;СИБУР Холдинг&raquo;
+			p В&nbsp;рамках программы по&nbsp;импортозамещению ООО &laquo;ВАКОМА РУС&raquo; выполнило работы по&nbsp;разработке рабочей конструкторской документации, изготовлению и&nbsp;поставке комплектных редукторов аналогов G7CA и&nbsp;G5C (оригинальный изготовитель NIPPON GEAR, Япония) для аппаратов воздушного охлаждения.
+			ul
+				li Корпус редукторов&nbsp;&mdash; крутильно-жесткий, недеформируемый, сварной конструкции, рассчитан в&nbsp;соответствии с&nbsp;МКЭ.
+				li Зубчатые зацепления закаленные цементовано-шлифованные с&nbsp;динамической балансировкой степени точности G1,6 (DIN ISO 2768-m).
+				li Материал: 18CrNiMo7-6 (близкий аналог AISI 4320) твердость 58-62HRC. 
+				li Функционально важные места снабжены контрольно-измерительными приборами с&nbsp;цифровыми датчиками сигналов. 
+				li Конические редукторы разработаны с&nbsp;учетом монтажа и&nbsp;установки на&nbsp;существующие места установки существующих редукторов NIPPON GEAR.
+	//- +s-img-news-2016-08-11
+	+s-img-news-body()
+		+slidImg('img/@2x/2018-02-20-news-01.jpg', 'img/@2x/2018-02-20-news-xl-01.jpg', '')
+		+slidImg('img/@2x/2018-02-20-news-02.jpg', 'img/@2x/2018-02-20-news-xl-02.jpg', '')
+		+slidImg('img/@2x/2018-02-20-news-03.jpg', 'img/@2x/2018-02-20-news-xl-03.jpg', '')
+		+slidImg('img/@2x/2018-02-20-news-04.jpg', 'img/@2x/2018-02-20-news-xl-04.jpg', '')
+		+slidImg('img/@2x/2018-02-20-news-05.jpg', 'img/@2x/2018-02-20-news-xl-05.jpg', '')
+		+slidImg('img/@2x/2018-02-20-news-06.jpg', 'img/@2x/2018-02-20-news-xl-06.jpg', '')
+		+slidImg('img/@2x/2018-02-20-news-07.jpg', 'img/@2x/2018-02-20-news-xl-07.jpg', '')
+		+slidImg('img/@2x/2018-02-20-news-08.jpg', 'img/@2x/2018-02-20-news-xl-08.jpg', '')
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th Параметр
+					th  Редуктор MK001B05 <br> (аналог G5C)
+					th  Редуктор MK002B07 <br> (аналог   G7CA)
+				mixin tr(t1, t2,t3)
+					tr.bg-light
+						td= t1
+						td( ).text-center= t2
+						td( ).text-center= t3
+				+tr('Мощность, кВт','11','15')
+				+tr('Передаточное отношение   редуктора,  и','1:5,091','1:7,333')
+				+tr('Номинальное число оборотов привода мин-1','1 450','1 450')
+				+tr('Частота вращения выходного вала мин-1','284','198')
+				+tr('Масса редуктора, кг','125','170')
+			 
+	
+	.pb-5
+		+bread()
+	+footer()

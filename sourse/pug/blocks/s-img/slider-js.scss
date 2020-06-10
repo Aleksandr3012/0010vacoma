@@ -16,6 +16,7 @@
 
 	&__slider-item a {
 		@include block(590, 510);
+		outline: none !important;
 
 		// max-width: rem(590);
 		// max-height: rem(510);
