@@ -1,0 +1,83 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block description 
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			h1.strong  Муфта 18&nbsp;МВт электродвигатель-турборедуктор ТА-71В (импортозамещение HOLSET, Англия) для ПАО &laquo;СИБУР Холдинг&raquo;
+			p В&nbsp;составе проекта изготовления комплекта зубчатой пары для мультипликатора RENK TA-71В специалистами нашей компании на&nbsp;площадке Заказчика были выполнены работы по&nbsp;замерам и&nbsp;последующей разработке конструкторской документации муфты со&nbsp;стороны привода редуктора (оригинальный изготовитель импортозамещение HOLSET, Великобритания). По&nbsp;итогам проведённых работ оборудование было изготовлено и&nbsp;поставлено Заказчику.
+	//- +s-img-news-2016-08-11
+	+s-img-news-body()
+		+slidImg('img/@2x/2018-07-03-2-news-01.jpg', 'img/@2x/2018-07-03-2-news-xl-01.jpg', '')
+		+slidImg('img/@2x/2018-07-03-2-news-02.jpg', 'img/@2x/2018-07-03-2-news-xl-02.jpg', '')
+		+slidImg('img/@2x/2018-07-03-2-news-03.jpg', 'img/@2x/2018-07-03-2-news-xl-03.jpg', '')
+		+slidImg('img/@2x/2018-07-03-2-news-04.jpg', 'img/@2x/2018-07-03-2-news-xl-04.jpg', '')
+		+slidImg('img/@2x/2018-07-03-2-news-05.jpg', 'img/@2x/2018-07-03-2-news-xl-05.jpg', '')
+		+slidImg('img/@2x/2018-07-03-2-news-06.jpg', 'img/@2x/2018-07-03-2-news-xl-06.jpg', '')
+		+slidImg('img/@2x/2018-07-03-2-news-07.jpg', 'img/@2x/2018-07-03-2-news-xl-07.jpg', '')
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th Параметр
+					th Муфта со стороны привода
+		 
+				mixin tr(t1, t2)
+					tr.bg-light
+						td= t1
+						td( ).text-center= t2
+				+tr("Мощность электродвигателя, кВт","18 200")
+				+tr("Частота вращения электродвигателя, об/мин","1 500")
+				+tr("Передаточное отношение редуктора","2,641")
+				+tr("Частота вращения входного вала редуктора, об/мин","3 962")
+				+tr("Момент, предаваемый муфтой, кНм","115,86")
+				+tr("115,86","2 326,13")
+	.pb-5
+		+bread()
+	+footer()

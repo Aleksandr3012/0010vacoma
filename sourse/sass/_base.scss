@@ -584,9 +584,9 @@ table {
 	margin-bottom: rem(0);
 }
 
-.mw-1200{
+.mw-1200 {
 	min-width: 1200px;
-	
+
 	margin-top: rem(0);
 	margin-bottom: rem(0);
 }
@@ -595,4 +595,10 @@ table {
 	overflow-x: auto;
 	padding-top: rem(60);
 	margin-bottom: rem(60);
+}
+
+.text-block {
+	h1 {
+		font-size: 1rem;
+	}
 }

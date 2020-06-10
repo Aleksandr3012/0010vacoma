@@ -30,6 +30,7 @@ const JSCCommon = {
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		})
+		$.fancybox.defaults.backFocus = false;
 	},
 	// /magnificPopupCall
 	toggleMenu() {
@@ -211,13 +212,13 @@ function eventHandler() {
 		$('.form-wrap__toggle-block--js').toggle();
 	});
 
-	$(".menu-mobile__nav .dropdown ").each(function(){
+	$(".menu-mobile__nav .dropdown ").each(function () {
 		$(this).append('<div class="toggle-l"></div>');
 	});
 
-	$( '.menu-mobile__nav .dropdown  ').click(function (){
-			$('.drop').slideToggle();
-			// return false;
+	$('.menu-mobile__nav .dropdown  ').click(function () {
+		$('.drop').slideToggle();
+		// return false;
 	});
 
 	//    const wow = new WOW({ mobile: false });
@@ -230,10 +231,10 @@ function eventHandler() {
 	// 	infinite: false
 	// });
 
-	$('body').each(function(){
+	$('body').each(function () {
 		var th = $(this);
 		var thclass = th.data('body-year');
-		th.find('.breadcrumb-item[data-year="'+ thclass +'"]').addClass('active');
+		th.find('.breadcrumb-item[data-year="' + thclass + '"]').addClass('active');
 	})
 
 
@@ -268,7 +269,7 @@ if (document.readyState !== 'loading') {
 
 var top_show = 150; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
 var delay = 1000; // Задержка прокрутки
-$(document).ready(function() {
+$(document).ready(function () {
 	$(window).scroll(function () { // При прокрутке попадаем в эту функцию
 		/* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
 		if ($(this).scrollTop() > top_show) $('.to-top-js').fadeIn();

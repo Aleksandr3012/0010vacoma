@@ -1,0 +1,88 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block description 
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			h1.strong  Комплект зубчатой пары для мультипликатора TA-71B (импортозамещение RENK, Германия) для ПАО &laquo;СИБУР Холдинг&raquo;
+			p В&nbsp;рамках программы по&nbsp;импортозамещению основного технологического оборудования ООО &laquo;ВАКОМА РУС&raquo; выполнило работы по&nbsp;разработке рабочей конструкторской документации, изготовлению и&nbsp;поставке комплект зубчатой пары для мультипликатора RENK TA-71, предназначенного для изменения крутящего момента центробежного компрессора смешанного сырьевого газа MITSUBISHI. 
+			p В&nbsp;объем поставки были включены следующие комплектующие: вал-шестерня, колесо зубчатое, зубчатая втулка и&nbsp;муфта со&nbsp;стороны привода, комплект подшипников (опорные подшипники, упорный подшипник).
+			p Разработка документации была выполнена по&nbsp;результатам проведенных замеров и&nbsp;изучения исходной документации на&nbsp;площадке Заказчика. При изготовлении были использованы усовершенствованные NiCrMo марки сплавов, имеющие повышенные характеристики, с&nbsp;проведением термообработки поверхности зубьев&nbsp;&mdash; цементация (твердость 60-62&nbsp;HRC) и&nbsp;динамической балансировки.
+	//- +s-img-news-2016-08-11
+	+s-img-news-body()
+		+slidImg('img/@2x/2018-07-03-1-news-01.jpg', 'img/@2x/2018-07-03-1-news-xl-01.jpg', '')
+		+slidImg('img/@2x/2018-07-03-1-news-02.jpg', 'img/@2x/2018-07-03-1-news-xl-02.jpg', '')
+		+slidImg('img/@2x/2018-07-03-1-news-03.jpg', 'img/@2x/2018-07-03-1-news-xl-03.jpg', '')
+		+slidImg('img/@2x/2018-07-03-1-news-04.jpg', 'img/@2x/2018-07-03-1-news-xl-04.jpg', '')
+		+slidImg('img/@2x/2018-07-03-1-news-05.jpg', 'img/@2x/2018-07-03-1-news-xl-05.jpg', '')
+		+slidImg('img/@2x/2018-07-03-1-news-06.jpg', 'img/@2x/2018-07-03-1-news-xl-06.jpg', '')
+		+slidImg('img/@2x/2018-07-03-1-news-07.jpg', 'img/@2x/2018-07-03-1-news-xl-07.jpg', '')
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th Параметр
+					th Вал-шестерня
+					th Колесо зубчатое в сборе
+				tr.bg-light
+					td  Число зубьев
+					td.text-center 39
+					td.text-center 103
+				mixin tr(t1, t2)
+					tr.bg-light
+						td= t1
+						td(colspan="2" ).text-center= t2
+				+tr("Передаточное отношение ",'1:2,64 ')
+				+tr("Межосевое расстояние, мм ",' 710±0,03') 
+				+tr("Угол наклона зубьев, °",'25°48’')
+				+tr("Модуль, мм",'9')
+				+tr("Масса, кг",'4 210,6')
+	.pb-5
+		+bread()
+	+footer()

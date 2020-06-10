@@ -1,0 +1,89 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block description 
+	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
+				span Новости
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			h1.strong Зубчатая передача мультипликатора нагнетателя Н-360-22-1 для ПАО &laquo;Нижнекамскнефтехим&raquo;
+			p Для пополнения фонда аварийно-технического запаса ООО &laquo;ВАКОМА РУС&raquo; выполнило работы по&nbsp;разработке конструкторской документации, изготовлению и&nbsp;поставке зубчатой передачи мультипликатора нагнетателя Н-360-22-1.
+			p Изготовление изделий было выполнено на&nbsp;основании разработанной техническими специалистами ООО &laquo;ВАКОМА РУС&raquo; конструкторской документации с&nbsp;использованием NiCrMo сплавов, с&nbsp;проведением технологических операций по&nbsp;термообработке поверхности зубьев&nbsp;&mdash; цементация (твердость 60&nbsp;HRC, h = 1,4&nbsp;мм), зубошлифовке и&nbsp;динамической балансировке.
+	//- +s-img-news-2016-08-11
+	+s-img-news-body()
+		+slidImg('img/@2x/2018-07-04-news-01.jpg', 'img/@2x/2018-07-04-news-xl-01.jpg', '')
+		+slidImg('img/@2x/2018-07-04-news-02.jpg', 'img/@2x/2018-07-04-news-xl-02.jpg', '')
+	 
+		//- +slidImg('img/@2x/news_item_20160811_02.jpg', 'img/@2x/news_item_20160811_02x.jpg', 'шестерня ведущая')
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th Параметр
+					th Вал-шестерня
+					th Колесо зубчатое 
+				tr.bg-light
+					td Число зубьев
+					td( ).text-center 44
+					td( ).text-center 115
+				mixin tr(t1, t2)
+					tr.bg-light
+						td= t1
+						td(colspan="2" ).text-center= t2
+				+tr("Передаточное отношение",'1 : 2,6')
+				tr.bg-light
+					td Частота вращения, об/мин.
+					td( ).text-center 7 718
+					td( ).text-center 2 976
+				+tr("Передваваемая мощность, кВт",'700')
+				+tr("Угол наклона зубьев, °",'31° 35’ 37’’')
+				+tr("Модуль, мм",'3')
+				+tr("Масса, кг",'351,27')
+	
+	.pb-5
+		+bread()
+	+footer()
