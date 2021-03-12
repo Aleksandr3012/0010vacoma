@@ -21,10 +21,10 @@ block pagecontent
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
 				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
 			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
 				span Технические возможности
-			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
-				span Новости
 			+e.LI.item.dropdown( itemprop="item" ): +e.link 
 				span Редукторы и&nbsp;мультипликаторы
 				+b.UL.drop
@@ -62,6 +62,7 @@ block pagecontent
 	//- +s-img-news-2016-08-11
 	+s-img-news-body()
 		+slidImg('img/@2x/2018-11-23-news-01.jpg', 'img/@2x/2018-11-23-news-xl-01.jpg')
+		+slidImg('img/@2x/2018-11-23-news-18.jpg', 'img/@2x/2018-11-23-news-xl-18.jpg')
 		+slidImg('img/@2x/2018-11-23-news-02.jpg', 'img/@2x/2018-11-23-news-xl-02.jpg')
 		+slidImg('img/@2x/2018-11-23-news-03.jpg', 'img/@2x/2018-11-23-news-xl-03.jpg')
 		+slidImg('img/@2x/2018-11-23-news-04.jpg', 'img/@2x/2018-11-23-news-xl-04.jpg')
@@ -78,7 +79,7 @@ block pagecontent
 		+slidImg('img/@2x/2018-11-23-news-15.jpg', 'img/@2x/2018-11-23-news-xl-15.jpg')
 		+slidImg('img/@2x/2018-11-23-news-16.jpg', 'img/@2x/2018-11-23-news-xl-16.jpg')
 		+slidImg('img/@2x/2018-11-23-news-17.jpg', 'img/@2x/2018-11-23-news-xl-17.jpg')
-		+slidImg('img/@2x/2018-11-23-news-18.jpg', 'img/@2x/2018-11-23-news-xl-18.jpg')
+
 		+slidImg('img/@2x/2018-11-23-news-19.jpg', 'img/@2x/2018-11-23-news-xl-19.jpg')
 		+slidImg('img/@2x/2018-11-23-news-20.jpg', 'img/@2x/2018-11-23-news-xl-20.jpg')
 		+slidImg('img/@2x/2018-11-23-news-21.jpg', 'img/@2x/2018-11-23-news-xl-21.jpg')

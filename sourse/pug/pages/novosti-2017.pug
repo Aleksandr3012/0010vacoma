@@ -20,12 +20,12 @@ block keywords
 block pagecontent 
 	mixin menu()
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
 				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
 			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
 				span Технические возможности
-			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
-				span Новости
 			+e.LI.item.dropdown( itemprop="item" ): +e.link 
 				span Редукторы и&nbsp;мультипликаторы
 				+b.UL.drop
@@ -53,10 +53,10 @@ block pagecontent
 		+itemNews("img/@2x/2017-12-05-preview.jpg","05.12.2017","Комплект ускоряющей передачи винтового компрессора ВГС-90/1,25-5,1 БК УХЛ1 для ПАО «Нижнекамскнефтехим»",'news-2017-12-05.html')
 		+itemNews("img/@2x/2017-11-22-preview.jpg","22.11.2017","Зубчатая пара мультипликатора Р-12500 в составе турбокомпрессора К-890-121-1 для ПАО «СИБУР Холдинг»",'news-2017-11-22.html')
 		+itemNews("img/@2x/09-07-2016--4.jpg","25.10.2017","Редуктор ЦТ-2060 мельницы Ø2,0 х 10,5 м для ООО «Цемек Минералс»",'news-2017-10-25.html')
-		+itemNews("img/@2x/2017-09-25-preview.jpg","25.09.2017","Комплект втулок червячных отжимной машины ЛК-8 для ПАО «СИБУР Холдинг»",'news-2017-09-25.html')
-		+itemNews("img/@2x/2017-06-08-preview.jpg","08.06.2017","Капитальный ремонт турборедуктора Р-3600 установки ГТТ-3М для АО «Аммоний»",'news-2017-06-08.html')
+		+itemNews("img/@2x/2017-09-25-news-01.jpg","25.09.2017","Комплект втулок червячных отжимной машины ЛК-8 для ПАО «СИБУР Холдинг»",'news-2017-09-25.html')
+		+itemNews("img/@2x/2017-06-08-news-13.jpg","08.06.2017","Капитальный ремонт турборедуктора Р-3600 установки ГТТ-3М для АО «Аммоний»",'news-2017-06-08.html')
 		+itemNews("img/@2x/2017-05-12-preview.jpg","12.05.2017","2 комплекта зубчатых пар турборедуктора М-430 привода центробежного компрессора 16ГЦ-300/6-120 для ПАО «СИБУР Холдинг»",'news-2017-05-12.html')
-		+itemNews("img/@2x/2017-02-13-preview.jpg","13.02.2017","Турборедукторы Р-3000, Р-6000 компрессора К 380-103-1 для ООО «Цемек Минералс»",'news-2017-02-13.html')
+		+itemNews("img/@2x/2017-02-13-news-10.jpg","13.02.2017","Турборедукторы Р-3000, Р-6000 компрессора К 380-103-1 для ПАО «СИБУР Холдинг»",'news-2017-02-13.html')
 	.pb-5
 		+bread()
 	//- +s-img

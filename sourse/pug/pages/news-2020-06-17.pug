@@ -1,0 +1,108 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Первый юбилей ООО «ВАКОМА РУС» - нам 5 лет!'
+	title= title
+block description 
+	meta(name="description", content= "Первый юбилей ООО «ВАКОМА РУС» - нам 5 лет!" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Первый юбилей ООО «ВАКОМА РУС» - нам 5 лет!
+			p В июне 2020 года исполнилось пять лет со дня основания нашей компании ООО «ВАКОМА РУС». Первый юбилей– это отличный повод для оценки результатов и перспектив развития. За 5 лет нам удалось зарекомендовать себя в качестве разработчика технических решений в области редукторостроения для оборудования различного типа и в качестве надежного поставщика комплектных редукторов, запасных частей с предоставлением услуг ремонтно-восстановительных, шефмонтажных и пусконаладочных работ.
+			p Мы благодарим наших партнеров и клиентов – тех, кто поверил в нас, для кого мы работаем каждый день, генерируем идеи, разрабатываем индивидуальные, а подчас и уникальные проекты.
+			p Мы верим, что следующие годы будут такими же плодотворными, успешными, интересными и захватывающими!
+
+
+
+
+
+
+
+
+
+
+	//-+s-img-news-2020-02-18
+	//-+s-img-news-body()
+		+slidImg('img/@2x/2020-06-09-news-01.jpg', 'img/@2x/2020-06-09-news-xl-01.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-06-09-news-02.jpg', 'img/@2x/2020-06-09-news-xl-02.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-06-09-news-03.jpg', 'img/@2x/2020-06-09-news-xl-03.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-06-09-news-04.jpg', 'img/@2x/2020-06-09-news-xl-04.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-06-09-news-05.jpg', 'img/@2x/2020-06-09-news-xl-05.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-06-09-news-06.jpg', 'img/@2x/2020-06-09-news-xl-06.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-06-09-news-07.jpg', 'img/@2x/2020-06-09-news-xl-07.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-06-09-news-08.jpg', 'img/@2x/2020-06-09-news-xl-08.jpg', 'вакома рус')
+		
+	//-.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Параметр
+					th Значение
+	
+				tr.bg-light
+					td  Передаточное число редуктора
+					td.text-center 1
+	
+				tr.bg-light
+					td  Скорость вращения валов, об/мин
+					td.text-center 450
+	
+				tr.bg-light
+					td  Мощность на ведущем валу, кВт
+					td.text-center 420
+	
+				tr.bg-light
+					td  Масса, кг
+					td.text-center 850
+	
+
+
+
+
+	
+	.pb-5
+		+bread()
+	+footer()

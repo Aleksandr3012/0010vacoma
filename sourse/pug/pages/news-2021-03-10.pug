@@ -1,0 +1,78 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Редукторы-мультипликаторы для испытательных стендов'
+	title= title
+block description 
+	meta(name="description", content= "ООО «ВАКОМА РУС» выполнило работы по изготовлению двух комплектов зубчатых пар конического редуктора G8C5 (оригинальный производитель NIPPON GEAR, Япония) для аппаратов воздушного охлаждения" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Редукторы-мультипликаторы для испытательных стендов
+			p ООО "ВАКОМА РУС" приступило к реализации программы по проектированию и изготовлению высокоскоростных редукторов-мультипликаторов для испытательных стендов, установленных на предприятиях моторостроительной, железнодорожной и аэрокосмической отраслей промышленности. 
+			p Особенности мультипликаторов для испытательных стендов:
+			ul
+				li высокая частота вращения быстроходного вала (до 30 000 об/мин);
+				li неравномерные режимы работы с частыми пусками и остановками;
+				li индивидуальные конструктивные особенности, обусловленные задачами конкретного стенда.
+			p В процессе анализа технических решений мировых производителей стендовых мультипликаторов (NOVAGEAR, Швейцария; LUFKIN, COTTA, США; BCSA Gear, Франция) были определены основные конструктивные особенности, которые позволяют обеспечить максимальную надежность машины с учетом особенностей эксплуатации, в т.ч. применение в конструкции мультипликаторов зубчатых пар повышенной точности изготовления, а также высокоскоростных прецизионных подшипников качения или специальных подшипников скольжения. 
+			p По требованию Заказчиков в комплект поставки могут быть также включены электродвигатели и частотные преобразователи, выпускаемые нашим партнером, компанией ABB OY, Финляндия, специальные соединительные муфты и станции жидкой смазки.
+			p Перед отгрузкой Заказчику каждый стендовый мультипликатор проходит обкатку без нагрузки (LOAD FREE TEST RUN) по специальной программе «V-TEST» с контролем температуры, вибрации и шумовых характеристик. 
+
+
+
+	//-+s-img-news-2020-02-18
+	+s-img-news-body()
+		+slidImg('img/@2x/2021-03-10-news-01.jpg', 'img/@2x/2021-03-10-news-xl-01.jpg', 'вакома рус')
+		+slidImg('img/@2x/2021-03-10-news-02.jpg', 'img/@2x/2021-03-10-news-xl-02.jpg', 'вакома рус')
+		+slidImg('img/@2x/2021-03-10-news-03.jpg', 'img/@2x/2021-03-10-news-xl-03.jpg', 'вакома рус')
+		+slidImg('img/@2x/2021-03-10-news-04.jpg', 'img/@2x/2021-03-10-news-xl-04.jpg', 'вакома рус')
+		+slidImg('img/@2x/2021-03-10-news-05.jpg', 'img/@2x/2021-03-10-news-xl-05.jpg', 'вакома рус')
+
+
+ 
+	
+	.pb-5
+		+bread()
+	+footer()

@@ -264,11 +264,11 @@ mixin text()
 	// /.text-block
 
 mixin messengers()
-	a(href="https://t.me/wol1414" target="_blank")
+	a(href="https://t.me/vakomarus" target="_blank")
 		img(src="img/telegram.png", alt="Вакома РУС")
-	a(href="viber://chat?number=79068988888" target="_blank")
+	a(href="viber://chat?number=79123030333" target="_blank")
 		img(src="img/viber.png", alt="Вакома РУС")
-	a(href="https://wa.me/79255420608" target="_blank")
+	a(href="https://wa.me/79123030333" target="_blank")
 		img.whatsapp(src="img/whatsapp.png", alt="Вакома РУС")
 
 
@@ -306,6 +306,10 @@ mixin messengers()
 						li.breadcrumb-item( data-year= year itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
 							a(href=`novosti-${year}.html` itemprop="item" )
 								span( itemprop="name")= `${year} год` 
+								meta(itemprop="position" )
+					li.breadcrumb-item(  itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
+							a(href=`index.html` itemprop="item" )
+								span( itemprop="name")= `2021 год` 
 								meta(itemprop="position" )
 					+li('2020')
 					+li('2019')

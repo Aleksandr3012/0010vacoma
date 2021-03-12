@@ -1,0 +1,94 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '3 комплекта зубчатых пар конического редуктора G8C5 АВО (импортозамещение NIPPONGEAR, Япония) для ПАО «СИБУР Холдинг»'
+	title= title
+block description 
+	meta(name="description", content= "3 комплекта зубчатых пар конического редуктора G8C5 АВО (импортозамещение NIPPONGEAR, Япония) для ПАО «СИБУР Холдинг»" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong 3 комплекта зубчатых пар конического редуктора G8C5 АВО (импортозамещение NIPPONGEAR, Япония) для ПАО «СИБУР Холдинг».
+			p ООО «ВАКОМА РУС» выполнило работы по изготовлению 3-х комплектов зубчатых пар конического редуктора G8C5 (оригинальный производитель NIPPONGEAR, Япония) для аппаратов воздушного охлаждения
+			p При изготовлении были использованы усовершенствованные NiCrMo марки сплавов, имеющие повышенные характеристики, с проведением термообработки поверхности зубьев – цементация (твердость 67 HRC, h = 1,4 – 1,7 мм), зубошлифовки. 
+
+	+s-img-news-25-01-2019()
+	//-+s-img-news-body()
+		+slidImg('img/@2x/2019-01-25-news-01.jpg', 'img/@2x/2019-01-25-news-xl-01.jpg', 'вакома рус')
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Параметр
+					th Вал-шестерня
+					th  Колесо зубчатое
+	
+				tr.bg-light
+					td  Число зубьев
+					td.text-center 9
+					td.text-center 62
+	
+				tr.bg-light
+					td  Передаточное отношение
+					td(colspan="2").text-center 6,8
+	
+				tr.bg-light
+					td  Угол наклона зубьев, °
+					td(colspan="2").text-center 33
+	
+				tr.bg-light
+					td  Модуль, мм
+					td(colspan="2").text-center 4,5
+	
+				tr.bg-light
+					td  Масса, кг
+					td(colspan="2").text-center 37
+	
+
+ 
+	
+	.pb-5
+		+bread()
+	+footer()

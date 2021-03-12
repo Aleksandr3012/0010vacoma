@@ -19,12 +19,12 @@ block keywords
 block pagecontent 
 	mixin menu()
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+			+e.LI.item.active( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
 				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
 			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
 				span Технические возможности
-			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
-				span Новости
 			+e.LI.item.dropdown( itemprop="item" ): +e.link 
 				span Редукторы и&nbsp;мультипликаторы
 				+b.UL.drop
@@ -48,10 +48,10 @@ block pagecontent
 	+bread()
 	
 	+s-news-body()
-		+itemNews("img/@2x/news_2016-08-11_preview.jpg","11.08.2016","Поставка зубчатой передачи для турборедуктора (мультипликатора) Р-430 в составе газоперекачивающего агрегата ТКА-Ц-16/76 для ПАО «СИБУР Холдинг»",'news-2016-08-11.html')
-		+itemNews("img/@2x/2016-11-05-preview.jpg","05.11.2016","Турборедуктор Р-530 к нагнетателю Н-360-21-1 для ООО «Цемек Минералс»",'news-2016-11-05.html')
-		+itemNews("img/@2x/2016-11-03-preview.jpg","03.11.2016","Турборедуктор Р-3600 установки ГТТ-3М для ООО «Цемек Минералс»",'news-2016-11-03.html')
 
+		+itemNews("img/@2x/2016-11-05-news-14.jpg","05.11.2016","Турборедуктор Р-530 к нагнетателю Н-360-21-1 для ООО «Цемек Минералс»",'news-2016-11-05.html')
+		+itemNews("img/@2x/2016-11-03-news-08.jpg","03.11.2016","Турборедуктор Р-3600 установки ГТТ-3М для ООО «Цемек Минералс»",'news-2016-11-03.html')
+		+itemNews("img/@2x/news_2016-08-11_preview.jpg","11.08.2016","Поставка зубчатой передачи для турборедуктора (мультипликатора) Р-430 в составе газоперекачивающего агрегата ТКА-Ц-16/76 для ПАО «СИБУР Холдинг»",'news-2016-08-11.html')
 		+itemNews("img/@2x/09-07-2016--4.jpg","09.07.2016","Поставка редуктора главного привода мельницы Ø4,0 х 13,5 м для ООО «Цемек Минералс»",'news-09-07-2016.html')
 		+itemNews("img/@2x/news-15-06-2018--1.jpg","09.07.2016","Поставка редуктора вспомогательного привода мельницы Ø4,0 х 13,5 м для ООО «Цемек Минералс»",'news-09-07-2016--2.html')
 	.pb-5

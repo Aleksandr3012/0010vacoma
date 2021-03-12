@@ -1,0 +1,99 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Капитальный ремонт редуктора Н-1-140 David Brown RADIKON для ПАО «Лукойл». '
+	title= title
+block description 
+	meta(name="description", content= "Капитальный ремонт редуктора Н-1-140 David Brown RADIKON для ПАО «Лукойл». " )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Капитальный ремонт редуктора Н-1-140 David Brown RADIKON для ПАО «Лукойл».
+			p В рамках реализации ремонтной программы основного технологического оборудования Группы ЛУКОЙЛ специалистами нашей компании был выполнен капитальный ремонт редуктора Н-1-140 David Brown RADIKON с выполнением следующего регламента работ:
+				ul
+					li Полная разборка редуктора.
+					li Контроль геометрии корпуса редуктора на 5-ти координатном станке.
+					li Контроль целостности корпуса методом дефектоскопии.
+					li Определение перечня доработок корпуса на основании замеров (расточка/наплавка/шлифовка мест посадки подшипников; расточка/наплавка/шлифовка разъема корпуса редуктора) и восстановление корпуса.
+					li Реверс-инжиниринг зубчатой передачи с использованием специнструмента и 5-ти координатного станка.
+					li Изготовление новой зубчатой передачи из NiCr сплавов (цементация, зубошлифовка).
+					li Установка новых подшипников в корпус редуктора, укладка зубчатой передачи, проверка пятна контакта, установка уплотнений, сборка редуктора.
+					li LFTR-Тестовые испытания редуктора (Load Free Test Run: температура, вибрация).
+			p Работы выполнены в контрактные сроки без замечаний.
+
+
+
+
+
+
+
+
+
+
+
+	//-+s-img-news-2020-02-18
+	+s-img-news-body()
+		+slidImg('img/@2x/2020-12-25-news-01.jpg', 'img/@2x/2020-12-25-news-xl-01.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-02.jpg', 'img/@2x/2020-12-25-news-xl-02.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-03.jpg', 'img/@2x/2020-12-25-news-xl-03.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-04.jpg', 'img/@2x/2020-12-25-news-xl-04.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-05.jpg', 'img/@2x/2020-12-25-news-xl-05.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-06.jpg', 'img/@2x/2020-12-25-news-xl-06.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-07.jpg', 'img/@2x/2020-12-25-news-xl-07.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-08.jpg', 'img/@2x/2020-12-25-news-xl-08.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-09.jpg', 'img/@2x/2020-12-25-news-xl-09.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-10.jpg', 'img/@2x/2020-12-25-news-xl-10.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-11.jpg', 'img/@2x/2020-12-25-news-xl-11.jpg', 'вакома рус')
+		+slidImg('img/@2x/2020-12-25-news-12.jpg', 'img/@2x/2020-12-25-news-xl-12.jpg', 'вакома рус')
+
+
+	
+
+
+
+ 
+	
+	.pb-5
+		+bread()
+	+footer()

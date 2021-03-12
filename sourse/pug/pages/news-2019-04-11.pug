@@ -1,0 +1,124 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Реверс-инжиниринг и поставка комплекта ускоряющей передачи для газодувки газа регенерации В-102 (импортозамещение MITSUBISHI, Япония) для ПАО «СИБУР Холдинг»'
+	title= title
+block description 
+	meta(name="description", content= "Реверс-инжиниринг и поставка комплекта ускоряющей передачи для газодувки газа регенерации В-102 (импортозамещение MITSUBISHI, Япония) для ПАО «СИБУР Холдинг»" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Реверс-инжиниринг и поставка комплекта ускоряющей передачи для газодувки газа регенерации В-102 (импортозамещение MITSUBISHI, Япония) для ПАО «СИБУР Холдинг»
+			p В рамках программы по импортозамещению основного технологического оборудования ООО «ВАКОМА РУС» выполнило работы по разработке рабочей конструкторской документации, изготовлению и поставке комплект ускоряющей передачи для газодувки газа регенерации В-102 производства MITSUBISHI. 
+			p Разработка документации была выполнена по результатам проведенных замеров и изучения исходной документации на площадке Заказчика. При изготовлении были использованы усовершенствованные NiCrMo марки сплавов, имеющие повышенные характеристики, с проведением термообработки поверхности зубьев – цементация (твердость 60HRC, h=1,4 мм), зубошлифовки и динамической балансировки. 
+
+
+
+	//- +s-img-news-2016-08-11
+	//-+s-img-news-body()
+		+slidImg('img/@2x/2019-03-25-news-01.jpg', 'img/@2x/2019-03-25-news-xl-01.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-03-25-news-02.jpg', 'img/@2x/2019-03-25-news-xl-02.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-03-25-news-03.jpg', 'img/@2x/2019-03-25-news-xl-03.jpg', 'вакома рус')
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Параметр
+					th Вал-шестерня
+					th Колесо зубчатое в сборе
+	
+				tr.bg-light
+					td  Номинальная мощность, кВт
+					td(colspan="2").text-center 370
+	
+	
+	
+				tr.bg-light
+					td  Число оборотов ведущего вала, об/мин
+					td(colspan="2").text-center 1 475
+	
+	
+	
+				tr.bg-light
+					td  Число оборотов ведомого вала, об/мин
+					td(colspan="2").text-center 9 130
+	
+	
+	
+				tr.bg-light
+					td  Число зубьев
+					td.text-center 33
+					td.text-center 209
+
+	
+				tr.bg-light
+					td  Межосевое расстояние, мм
+					td(colspan="2").text-center 405 ± 0,03
+	
+		
+				tr.bg-light
+					td  Угол наклона зубьев
+					td(colspan="2").text-center 25°48’
+	
+		
+				tr.bg-light
+					td  Модуль, мм
+					td(colspan="2").text-center 3
+	
+		
+				tr.bg-light
+					td  Общая масса, кг
+					td(colspan="2").text-center 207,72
+	
+						
+	
+	
+
+
+ 
+	
+	.pb-5
+		+bread()
+	+footer()

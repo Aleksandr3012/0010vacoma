@@ -21,10 +21,10 @@ block pagecontent
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
 				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
 			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
 				span Технические возможности
-			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
-				span Новости
 			+e.LI.item.dropdown( itemprop="item" ): +e.link 
 				span Редукторы и&nbsp;мультипликаторы
 				+b.UL.drop
@@ -56,13 +56,14 @@ block pagecontent
 	//- +s-img-news-2016-08-11
 	+s-img-news-body()
 		+slidImg('img/@2x/2016-11-03-news-01.jpg', 'img/@2x/2016-11-03-news-xl-01.jpg', 'Вакома РУС')
+		+slidImg('img/@2x/2016-11-03-news-08.jpg', 'img/@2x/2016-11-03-news-xl-08.jpg', 'Вакома РУС')
 		+slidImg('img/@2x/2016-11-03-news-02.jpg', 'img/@2x/2016-11-03-news-xl-02.jpg', 'Вакома РУС')
 		+slidImg('img/@2x/2016-11-03-news-03.jpg', 'img/@2x/2016-11-03-news-xl-03.jpg', 'Вакома РУС')
 		+slidImg('img/@2x/2016-11-03-news-04.jpg', 'img/@2x/2016-11-03-news-xl-04.jpg', 'Вакома РУС')
 		+slidImg('img/@2x/2016-11-03-news-05.jpg', 'img/@2x/2016-11-03-news-xl-05.jpg', 'Вакома РУС')
 		+slidImg('img/@2x/2016-11-03-news-06.jpg', 'img/@2x/2016-11-03-news-xl-06.jpg', 'Вакома РУС')
 		+slidImg('img/@2x/2016-11-03-news-07.jpg', 'img/@2x/2016-11-03-news-xl-07.jpg', 'Вакома РУС')
-		+slidImg('img/@2x/2016-11-03-news-08.jpg', 'img/@2x/2016-11-03-news-xl-08.jpg', 'Вакома РУС')
+		
 		+slidImg('img/@2x/2016-11-03-news-09.jpg', 'img/@2x/2016-11-03-news-xl-09.jpg', 'Вакома РУС')
 	.container
 		.strong Технические характеристики:

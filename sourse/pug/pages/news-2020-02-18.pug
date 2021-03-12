@@ -1,0 +1,114 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Шефмонтаж и пусконаладка турбо-планетарного редуктора RENK TPA-40P компрессорной установки на предприятии ЛУКОЙЛ-ООО «СТАВРОЛЕН»'
+	title= title
+block description 
+	meta(name="description", content= "Шефмонтаж и пусконаладка турбо-планетарного редуктора RENK TPA-40P компрессорной установки на предприятии ЛУКОЙЛ-ООО «СТАВРОЛЕН»" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Шефмонтаж и пусконаладка турбо-планетарного редуктора RENK TPA-40P компрессорной установки на предприятии ЛУКОЙЛ-ООО «СТАВРОЛЕН»
+			p Специалистами ООО «ВАКОМА РУС» выполнены шефмонтажные и пусконаладочные работы турбо-планетарного редуктора RENK TPA-40P компрессорной установки на предприятии ЛУКОЙЛ-ООО "СТАВРОЛЕН". 
+			p Капитальный ремонт турбо-планетарного редуктора RENK TPA-40P был проведен нашей компанией в рамках реализации ремонтной программы основного технологического оборудования Группы ЛУКОЙЛ.
+			p В течение 72-х часов представители нашей компании совместно с техническим персоналом Заказчика непрерывно следили за работой компрессорной установки, работающей под нагрузкой в номинальном режиме, с ежечасной фиксацией основных технологических параметров.
+			p По окончанию 72-х часовых испытаний оборудование было принято Заказчиком в постоянную эксплуатацию.
+
+
+
+
+
+
+	+s-img-news-2020-02-18
+	//-+s-img-news-body()
+		+slidImg('img/@2x/2019-08-16-news-01.jpg', 'img/@2x/2019-08-16-news-xl-01.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-02.jpg', 'img/@2x/2019-08-16-news-xl-02.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-03.jpg', 'img/@2x/2019-08-16-news-xl-03.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-04.jpg', 'img/@2x/2019-08-16-news-xl-04.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-05.jpg', 'img/@2x/2019-08-16-news-xl-05.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-06.jpg', 'img/@2x/2019-08-16-news-xl-06.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-07.jpg', 'img/@2x/2019-08-16-news-xl-07.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-08.jpg', 'img/@2x/2019-08-16-news-xl-08.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-09.jpg', 'img/@2x/2019-08-16-news-xl-09.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-08-16-news-10.jpg', 'img/@2x/2019-08-16-news-xl-10.jpg', 'вакома рус')
+		
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Наименование параметра
+					th Значение
+	
+				tr.bg-light
+					td  Передаваемая мощность, макс. кВт
+					td.text-center 880
+	
+				tr.bg-light
+					td  Число оборотов ведущего вала, об/мин
+					td.text-center 1 488
+	
+				tr.bg-light
+					td  Число оборотов ведомого вала, об/мин
+					td.text-center 15 506
+	
+				tr.bg-light
+					td  Передаточное число, i
+					td.text-center 10,421
+	
+				tr.bg-light
+					td  Потеря мощности, кВт
+					td.text-center ≈ 14 кВт
+	
+				tr.bg-light
+					td  Масса, кг
+					td.text-center 
+	
+
+
+ 
+	
+	.pb-5
+		+bread()
+	+footer()

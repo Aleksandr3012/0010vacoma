@@ -1,0 +1,68 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Поставка запасных частей к аппаратам воздушного охлаждения (импортозамещение TOYO Engineering Corporation, Япония) для ПАО «СИБУР Холдинг»'
+	title= title
+block description 
+	meta(name="description", content= "Поставка запасных частей к аппаратам воздушного охлаждения (импортозамещение TOYO Engineering Corporation, Япония) для ПАО «СИБУР Холдинг»" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Поставка запасных частей к аппаратам воздушного охлаждения (импортозамещение TOYO Engineering Corporation, Япония) для ПАО «СИБУР Холдинг»
+			p За период 2018 года и начало 2019 года в рамках реализации программы по импортозамещению ПАО «СИБУР Холдинг» наша компания выполнила ряд поставок комплектующих и запасных частей к аппаратам воздушного охлаждения оригинального производителя TOYO Engineering Corporation, Япония.
+			p Изготовление комплектующих было выполнено как по разработанной конструкторской документации специалистами ООО «ВАКОМА РУС» на основании замеров на производственных площадках Холдинга, так и на основании предоставленной конструкторской документации.
+			p При изготовлении запасных частей были применены специальные марки сталей, высокая степень точности механической обработки.
+			p Оборудование было введено в эксплуатация в срок без замечаний.
+
+
+
+	//- +s-img-news-2016-08-11
+	+s-img-news-body()
+		+slidImg('img/@2x/2019-04-01-news-01.jpg', 'img/@2x/2019-04-01-news-xl-01.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-04-01-news-02.jpg', 'img/@2x/2019-04-01-news-xl-02.jpg', 'вакома рус')
+
+	
+	.pb-5
+		+bread()
+	+footer()

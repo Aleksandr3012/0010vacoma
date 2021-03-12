@@ -1,5 +1,5 @@
-'use strict'
-
+'use strict';
 module.exports = {
-  npm: require('./npm')
-}
+    bower: require('./bower'),
+    npm: require('./npm')
+};

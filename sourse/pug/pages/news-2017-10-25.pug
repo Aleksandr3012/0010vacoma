@@ -21,10 +21,10 @@ block pagecontent
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
 				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
 			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
 				span Технические возможности
-			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
-				span Новости
 			+e.LI.item.dropdown( itemprop="item" ): +e.link 
 				span Редукторы и&nbsp;мультипликаторы
 				+b.UL.drop
@@ -61,29 +61,15 @@ block pagecontent
 			table
 				tr( style="background-color:#16437c; color: #fff").text-center
 					th Параметр
-					th Аэратор Ø 3 700
+					th Значение
 				mixin tr(t1, t2)
 					tr.bg-light
 						td= t1
 						td( ).text-center= t2
-				+tr("Назначение",'Смешивание сточных вод')
-				+tr("Частота вращения вала аэратора, об./мин",'34')
-				+tr("Мощность электродвигателя аэратора, кВт",'200')
-				+tr("Смазка редуктора ",'Жидкая, циркуляционная')
-				+tr("Количество импеллеров (Ø 3 700, 2 Ø 780)",'2')
-				+tr("Характеристика станции жидкой смазки:",'37')
-				+tr("-производительность, л/мин",'0,5 (5,0)')
-				+tr("          -давление, Мпа (кг/см2)",'1,5')
-				+tr("          -мощность эл. Двигателя, кВт",'')
-				tr.bg-light
-					td(colspan="2") Габаритные размеры, мм:
-				
-				+tr("          - длина",'3 700')
-				+tr("          - ширина",'3 700')
-				+tr("          - высота",'9 020')
-				+tr("Масса, кг",'14 450')
-				tr.bg-light
-					td(colspan="2") В&nbsp;состав поставки входили редукторы, импеллеры, рамы, система автоматизации с&nbsp;датчиками различного типа, система электроснабжения.
+				+tr("Мощность, кВт",'200')
+				+tr("Номинальное число оборотов, об/мин",'740')
+				+tr("Передаточное отношение",'83,998')
+				+tr("Вес, кг",'12 000')
  
 	
 	.pb-5

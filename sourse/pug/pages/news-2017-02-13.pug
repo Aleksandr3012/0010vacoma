@@ -9,7 +9,7 @@ include ../blocks/s-news/_s-news.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Новость'
+	- let  title= 'Турборедукторы Р-3000, Р-6000 компрессора К 380-103-1 для ПАО «СИБУР Холдинг»'
 	title= title
 block description 
 	meta(name="description", content= "Проектирование и изготовление редукторной техники на основании конструкторской документации Заказчиком, а также по собственному инжинирингу" )
@@ -21,10 +21,10 @@ block pagecontent
 		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
 				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
 			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
 				span Технические возможности
-			+e.LI.item.active( itemprop="item" ): +e.A.link(href="novosti-2016.html"  itemprop="url") 
-				span Новости
 			+e.LI.item.dropdown( itemprop="item" ): +e.link 
 				span Редукторы и&nbsp;мультипликаторы
 				+b.UL.drop
@@ -49,8 +49,8 @@ block pagecontent
 	
 	+text()(class="text-block--inner")
 		.container
-			h1.strong  Турборедукторы Р-3000, Р-6000 компрессора К&nbsp;380-103-1 для ООО &laquo;Цемек Минералс&raquo;
-			p В&nbsp;рамках реализации ремонтной программы одного из&nbsp;заказчиков ООО &laquo;Цемек Минералс&raquo; нефтегазовой промышленности специалистами нашей компании были разработаны и&nbsp;изготовлены турборедукторы для компрессора К&nbsp;380-103-1.
+			h1.strong  Турборедукторы Р-3000, Р-6000 компрессора К&nbsp;380-103-1 для ПАО &laquo;СИБУР Холдинг&raquo;
+			p Для пополнения аварийно-технического запаса ПАО «СИБУР Холдинг» специалистами нашей компании были спроектированы и изготовлены турборедукторы для компрессора К 380-103-1.
 			p В&nbsp;рамках реализации проекта технические специалисты ООО &laquo;ВАКОМА РУС&raquo; посетили производственную площадку Заказчика для проведения замеров всех основных геометрических и&nbsp;присоединительных размеров и&nbsp;ознакомления с&nbsp;имеющейся технической документацией.
 			p По&nbsp;требованию заказчика передаточные числа турборедукторов были изменены. На&nbsp;основании выполненных расчетов была выпущена на&nbsp;согласование рабочая конструкторская документация (все посадочные и&nbsp;присоединительные размеры сохранены).
 			ul
@@ -65,6 +65,7 @@ block pagecontent
 	//- +s-img-news-2016-08-11
 	+s-img-news-body()
 		+slidImg('img/@2x/2017-02-13-news-01.jpg', 'img/@2x/2017-02-13-news-xl-01.jpg')
+		+slidImg('img/@2x/2017-02-13-news-10.jpg', 'img/@2x/2017-02-13-news-xl-10.jpg')
 		+slidImg('img/@2x/2017-02-13-news-02.jpg', 'img/@2x/2017-02-13-news-xl-02.jpg')
 		+slidImg('img/@2x/2017-02-13-news-03.jpg', 'img/@2x/2017-02-13-news-xl-03.jpg')
 		+slidImg('img/@2x/2017-02-13-news-04.jpg', 'img/@2x/2017-02-13-news-xl-04.jpg')
@@ -73,7 +74,7 @@ block pagecontent
 		+slidImg('img/@2x/2017-02-13-news-07.jpg', 'img/@2x/2017-02-13-news-xl-07.jpg')
 		+slidImg('img/@2x/2017-02-13-news-08.jpg', 'img/@2x/2017-02-13-news-xl-08.jpg')
 		+slidImg('img/@2x/2017-02-13-news-09.jpg', 'img/@2x/2017-02-13-news-xl-09.jpg')
-		+slidImg('img/@2x/2017-02-13-news-10.jpg', 'img/@2x/2017-02-13-news-xl-10.jpg')
+		
 	.container
 		.strong Технические характеристики:
 		.table-wrap

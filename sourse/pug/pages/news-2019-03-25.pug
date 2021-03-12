@@ -1,0 +1,97 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/s-img/_s-img.pug 
+include ../blocks/s-news/_s-news.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Новость'
+	title= title
+block description 
+	meta(name="description", content= "Выполнение ремонтных работ по редуктору 2-х шнекового экструдера WELDING (поставка вал-шестерней) для ПАО «Нижнекамскнефтехим»" )
+
+block keywords
+	meta(name="Keywords", content= "вакома, вакома магитогорск, вакома рус, vakoma, проектирование редукторной техники, изготовление редуктора, проектирование редуктора, проектирование валов редуктора, проектирование одноступенчатого редуктора, проектирование планетарного редуктора, проектирование редуктора, проектирование цилиндрического редуктора, проектирование червячного редуктора" )
+block pagecontent 
+	mixin menu()
+		+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			+e.LI.item( itemprop="item" ): +e.A.link(href="index.html"  itemprop="url") 
+				span Главная
+			+e.LI.item( itemprop="item" ): +e.A.link(href="our-company.html"  itemprop="url") 
+				span О компании
+			+e.LI.item( itemprop="item" ): +e.A.link(href="tehnicheskie-vozmojnosti.html"  itemprop="url") 
+				span Технические возможности
+			+e.LI.item.dropdown( itemprop="item" ): +e.link 
+				span Редукторы и&nbsp;мультипликаторы
+				+b.UL.drop
+					+e.LI.item
+						+e.A.link(href="tyajelonagrujennie-reduktori.html" itemprop="url") Тяжелонагруженные редукторы
+					+e.LI.item
+						+e.A.link(href="turboreduktori.html" itemprop="url") Мультипликаторы (турборедукторы)
+			+e.LI.item( itemprop="item" ): +e.A.link(href="zubchatie-peredachi.html"  itemprop="url") 
+				span Зубчатые передачи и&nbsp;комплектующие
+			+e.LI.item( itemprop="item" ): +e.A.link.text-warning(href="importozameshenie.html"  itemprop="url")
+				span Импортозамещение
+			+e.LI.item( itemprop="item" ): +e.A.link(href="kontakti.html"  itemprop="url") 
+				span Контакты
+	//- +header()
+	+mob-mnu()
+		+menu()
+	+topLine()
+	+top-nav
+		+menu()
+
+	+bread()
+	
+	+text()(class="text-block--inner")
+		.container
+			p.strong Выполнение ремонтных работ по редуктору 2-х шнекового экструдера WELDING (поставка вал-шестерней) для ПАО «Нижнекамскнефтехим»
+			p В рамках реализации ремонтной программы основного технологического оборудования ПАО «Нижнекамскнефтехим» специалистами нашей компании был выполнен ремонт редуктора 2-х шнекового экструдера WELDING 8 т с изготовлением вал-шестерен.
+			p Перед изготовлением комплектующих специалисты нашей компании произвели замеры изделий, выполнили расчеты исходной конструкторской документации, по результатам которой были изготовлены вал-шестерни основная и вспомогательная, шлицевые удлинители.  
+			p При изготовлении использовались современные усовершенствованные марки NiCrMo сплавов сталей, с проведением технологических операций цементации зубьев (>59HRC, h = 1,6 мм), зубошлифовки. Контроль точности изготовления: трехкоординатный измерительный стенд GLEASON 3000 GMM (общая геометрия), KLINGELNBERG PFSU 1200 (эвольвентометр), AFFRI (контроль твердости).
+			p Перед отгрузкой была проведена антикоррозийная защита: покрытие материалом TECTYL OIL всех обработанных поверхностей. Упаковка: водоотталкивающая упаковка для перевозки.
+
+
+	//- +s-img-news-2016-08-11
+	+s-img-news-body()
+		+slidImg('img/@2x/2019-03-25-news-01.jpg', 'img/@2x/2019-03-25-news-xl-01.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-03-25-news-03.jpg', 'img/@2x/2019-03-25-news-xl-03.jpg', 'вакома рус')
+		+slidImg('img/@2x/2019-03-25-news-02.jpg', 'img/@2x/2019-03-25-news-xl-02.jpg', 'вакома рус')
+
+	.container
+		.strong Технические характеристики:
+		.table-wrap
+			table
+				tr( style="background-color:#16437c; color: #fff").text-center
+					th( ) Параметр
+					th Вал-шестерня основная
+					th Вал-шестерня вспомогательная
+	
+				tr.bg-light
+					td  Число зубьев
+					td.text-center 23
+					td.text-center 23
+	
+				tr.bg-light
+					td  Угол наклона зуба
+					td(colspan="2").text-center 8°
+	
+	
+				tr.bg-light
+					td  Модуль, мм
+					td(colspan="2").text-center 9
+	
+				tr.bg-light
+					td  Масса, кг
+					td(colspan="2").text-center 427,93
+	
+
+ 
+	
+	.pb-5
+		+bread()
+	+footer()
